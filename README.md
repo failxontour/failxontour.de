@@ -10,12 +10,12 @@ Forked from
     [LittleLink](https://github.com/sethcottle/littlelink)
     Originally using the MIT License
 
-Includes
+Dependencies
     [Hashover](https://github.com/jacobwb/hashover/)
     [Databuddy Analytics JS](https://github.com/databuddy-analytics/Databuddy)
+    [Apache Block Bad Bots](https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker)
 
-
-License for most of my images.:
+License for most of my images, videos, music.:
 [CC-BY-NC-SA 4.0](https://failxontour.de/cc-by-nc-sa-4.0.LICENSE)
 
 Contains images from
