@@ -1,0 +1,191 @@
+<!-- Thanks for viewing the source code. I don't minify for readability. © 2025 - FailXontour -->
+<!DOCTYPE html>
+<html class="theme-auto" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FailXontour</title>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="failxontour">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="description" content="find all my hot links to socials, blog'n' stuff here">
+    <meta name="keywords" content="failxontour, failx">
+    <link rel="canonical" href="https://failxontour.de">
+    <meta name="author" content="failxontour">
+    <meta name="fediverse:creator" content="@failxontour@mastodon.social">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brands.css">
+  </head>
+<body onload="getCookies()">
+    <div class="container">
+        <div class="column">
+          <img class="avatar" src="images/pirating-is-good-practice-circle.svg" alt="Pirating is good practice">
+            <a href="https://failxontour.de/" class="h-card" rel="me"><h1>FailXontour</h1></a>
+            <p>Welcome to my personal website were I share updates, blog and got buttons to my profiles. Stuff of interest</p>
+            <h2>what to expect to find here?</h2>
+            <b>Online privacy advocate, tech-endorser, early adopter, PEBKAC, Linux user, mediadesigner, gaming,<br>mental health (journaling), [web-dev] maybe?</b><br><br>
+            <h3>My name is Felix I am 26 [cis/m] and associate myself as Bi-curious</h3>
+            <p>I like cats, guinea pigs my gf, family charity, music, binge watching, cars I do care for human rights, global goals in the interest of everyone not just myself. Even if I sound narcassitic.</p>
+            <p>I like stuff that tingles' my spidey senses. That's why I am on the 🕸️ regain your own personal space</p>
+            <p>Socials</p>
+            <nav aria-label="Socials" class="button-stack">
+              <!-- <button class="button button-bluesky" name="Bluesky" command="toggle-popover" commandfor="bluesky"  type="button"><img class="icon" aria-hidden="true" src="images/icons/bluesky.svg" alt="Bluesky Logo">Bluesky</button><button type="button" id="bluesky" popover command="hide-popover" commandfor="bluesky" onclick="window.open('https://bsky.app/profile/failxontour.bsky.social','_blank');">open external link to bsky.app/profile/failxontour.bsky.social</button> -->
+              <button class="button button-mastodon" name="Mastodon" command="toggle-popover" commandfor="mastodon" type="button"><img class="icon" aria-hidden="true" src="images/icons/mastodon.svg" alt="Mastodon Logo">Mastodon</button><button type="button" id="mastodon" popover command="hide-popover" commandfor="mastodon" onclick="window.open('https://mastodon.social/@failxontour','_blank');">open external link to <a href="https://mastodon.social/@failxontour" target="_blank" rel="me">mastodon.social/@failxontour</a></button>
+              <button class="button button-matrix" name="Matrix" command="toggle-popover" commandfor="matrix" type="button"><img class="icon" aria-hidden="true" src="images/icons/matrix.svg" alt="Matrix Logo">Matrix</button><button type="button" id="matrix" popover command="hide-popover" commandfor="matrix" onclick="window.open('https://matrix.to/#/#nebulon:matrix.org','_blank');">open external link to invite you to a private chat server matrix.to/#/#nebulon:matrix.org</button>
+              <button class="button button-steam-alt" name="Steam" command="toggle-popover" commandfor="steam" type="button"><img class="icon" aria-hidden="true" src="images/icons/steam.svg" alt="Steam Logo">Steam</button><button type="button" id="steam" popover command="hide-popover" commandfor="steam" onclick="window.open('https://steamcommunity.com/id/failxontour/','_blank');">open external link to steamcommunity.com/id/failxontour/</button>
+              <button class="button button-default" name="email" onclick="window.location.href = 'mailto:friends@failxontour.de';"  type="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Send me a friendly email</button>
+            </nav>
+            <p>Me</p>
+            <nav aria-label="Me" class="button-stack">
+              <button class="button button-default" name="Blog" onclick="window.location.href = 'blog/index.php';" type="button"><img class="icon" aria-hidden="true" src="images/icons/blog-solid.svg" alt="Blog Solid Icon">Blog</button>
+              <button class="button button-default" name="Videos" onclick="window.location.href = 'videos/index.html';" type="button"><img class="icon" aria-hidden="true" src="images/icons/video-solid.svg" alt="Video Solid Icon">Videos</button>
+              <button class="button button-default" name="Guestbook" onclick="window.location.href = 'guestbook.html';" type="button"><img class="icon" aria-hidden="true" src="images/icons/book-solid.svg" alt="Book Solid Icon">Guestbook</button>
+              <button class="button button-default" name="Music" onclick="window.location.href = 'venexim.html';" type="button"><img class="icon" aria-hidden="true" src="images/icons/music-solid.svg" alt="Music Solid Icon">Music</button>
+              <button class="button button-default" name="Share" onclick="window.location.href = 'https://share.failxontour.de';" type="button"><img class="icon" aria-hidden="true" src="images/icons/note-sticky-solid.svg" alt="Note Sticky Solid Icon">Stickers</button>
+              <button class="button button-default" name="Portfolio" onclick="window.location.href = 'https://felix.bauerschaefer.com/';" type="button"><img class="icon" aria-hidden="true" src="images/icons/user-tie-solid.svg" alt="User Tie Solid Icon">Portfolio | Piwigo</button>
+              <button class="button button-default" name="JAUP" onclick="window.location.href = 'https://thesa-fest.com/';" type="button"><img class="icon" aria-hidden="true" style="width:80px; height:20px;" src="images/logo2.gif" alt="JAUP">JAUP</button>
+              <button class="button button-default" name="Pronouns" command="toggle-popover" commandfor="pronouns" type="button"><img class="icon" aria-hidden="true" src="images/icons/pronouns.svg" alt="Pronouns Icon">Pronouns</button><button type="button" id="pronouns" popover command="hide-popover" commandfor="pronouns" onclick="window.open('https://pronomen.net/@failxontour','_blank');">open external link to pronomen.net/@failxontour</button>
+              <button class="button button-default" name="Günther" onclick="window.location.href = 'https://guenther.bauerschaefer.com/';" type="button"><img class="icon" aria-hidden="true" src="images/icons/paw-solid.svg" alt="Paw Solid Icon">Dog</button>
+            </nav>
+            <p>Local</p>
+            <nav aria-label="Local" class="button-stack">
+              <button class="button button-rock" name="Rockini" command="toggle-popover" commandfor="rockini" type="button"><img class="icon" aria-hidden="true" src="images/icons/headphones-simple-solid.svg" alt="Rockini icon">Rockini</button><button type="button" id="rockini" popover command="hide-popover" commandfor="rockini" onclick="window.open('https://rockini-nienburg.com/','_blank');">open external link to rockini-nienburg.com</button>
+              <button class="button button-rock" name="Burnout" command="toggle-popover" commandfor="burnout" type="button"><img class="icon" aria-hidden="true" src="images/icons/hand-back-fist-solid.svg" alt="Burnout Festival icon">Burnout Festival</button><button type="button" id="burnout" popover command="hide-popover" commandfor="burnout" onclick="window.open('http://burnoutfestival.com/','_blank');">⚠️ open UNSAFE external link to http://burnoutfestival.com ⚠️</button>
+              <button class="button button-weserbeatz" name="Weserbeatz" command="toggle-popover" commandfor="weserbeatz" type="button"><img class="icon" aria-hidden="true" src="images/icons/weserbeatz.jpg" alt="Weserbeatz icon">Weserbeatz</button><button type="button" id="weserbeatz" popover command="hide-popover" commandfor="weserbeatz" onclick="window.open('https://weserbeatz.de/','_blank');">open external link to weserbeatz.de</button>
+              <button class="button button-freibad-am-dobben" name="Freibad am Dobben" command="toggle-popover" commandfor="freibad-am-dobben" type="button"><img class="icon" aria-hidden="true" src="images/icons/freibad.png" alt="Freibad am Dobben icon">Freibad am Dobben</button><button type="button" id="freibad-am-dobben" popover command="hide-popover" commandfor="freibad-am-dobben" onclick="window.open('https://freibad-am-dobben.de/','_blank');">open external link to freibad-am-dobben.de</button>
+              <button class="button button-weserbeatz" name="Das Sprotte" command="toggle-popover" commandfor="das-sprotte" type="button"><img class="icon" aria-hidden="true" src="images/icons/sprotte.jpg" alt="Das Sprotte icon">Das Sprotte</button><button type="button" id="das-sprotte" popover command="hide-popover" commandfor="das-sprotte" onclick="window.open('https://das-sprotte.de/ihre-spende-ist-bei-uns-in-guten-haenden/','_blank');">open external link to das-sprotte.de/ihre-spende-ist-bei-uns-in-guten-haenden</button>
+              <button class="button button-weserbeatz" name="Social Car Crew" command="toggle-popover" commandfor="social-car-crew" type="button"><img class="icon" aria-hidden="true" src="images/icons/socialcarcrew.png" alt="Social Car Crew icon">Social Car Crew</button><button type="button" id="social-car-crew" popover command="hide-popover" commandfor="social-car-crew" onclick="window.open('https://www.socialcarcrew.de/','_blank');">open external link to www.socialcarcrew.de</button>
+              <button class="button button-weserbeatz" name="Instagram" command="toggle-popover" commandfor="bmw-crew" type="button"><img class="icon" aria-hidden="true" src="images/icons/bmw.png" alt="BMW Crew Nienburg icon">BMW Crew Nienburg</button><button type="button" id="bmw-crew" popover command="hide-popover" commandfor="bmw-crew" onclick="window.open('https://www.instagram.com/bmw_crew_lk_nienburg/','_blank');">open external link to instagram.com/bmw_crew_lk_nienburg</button>
+              <button class="button button-rally-sulingen" name="Rally Sulingen" command="toggle-popover" commandfor="rally-sulingen" type="button"><img class="icon" aria-hidden="true" src="images/icons/rallysulingen.png" alt="Rally Sulingen icon">Rally Sulingen</button><button type="button" id="rally-sulingen" popover command="hide-popover" commandfor="rally-sulingen" onclick="window.open('https://www.rallye-sulingen.de/','_blank');">open external link to rallye-sulingen.de</button>
+              <button class="button button-weserbeatz" name="Die Linke Nienburg" command="toggle-popover" commandfor="die-linke" type="button"><img class="icon" aria-hidden="true" src="images/icons/dielinke.svg" alt="Die Linke icon">Die Linke</button><button type="button" id="die-linke" popover command="hide-popover" commandfor="die-linke" onclick="window.open('https://www.dielinke-ni.de/start/','_blank');">open external link to www.dielinke-ni.de/start</button>
+            </nav>
+            <p>🤔 you got 🪙 to spare? Donate here</p>
+            <nav aria-label="Donate" class="button-stack">
+              <button class="button button-default" name="SOS Balkanroute" command="toggle-popover" commandfor="sos" type="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">SOS Balkanroute</button><button type="button" id="sos" popover command="hide-popover" commandfor="sos" onclick="window.open('https://lnob.net/geforderte-projekte/sos-balkanroute/','_blank');">open external link to lnob.net/geforderte-projekte/sos-balkanroute/</button>
+              <button class="button button-default" name="DLRG" type="button" command="toggle-popover" commandfor="dlrg"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">DLRG</button><button type="button" id="dlrg" popover command="hide-popover" commandfor="dlrg" onclick="window.open('https://spenden.dlrg.de/','_blank');">open external link to spenden.dlrg.de</button>
+              <button class="button button-default" name="UNO" type="button" command="toggle-popover" commandfor="uno"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">UNO Flüchtlingshilfe</button><button type="button" id="uno" popover command="hide-popover" commandfor="uno" onclick="window.open('https://www.uno-fluechtlingshilfe.de/','_blank');">open external link to www.uno-fluechtlingshilfe.de</button>
+              <button class="button button-default" name="Johanniter" type="button" command="toggle-popover" commandfor="johanniter"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Johanniter</button><button type="button" id="johanniter" popover command="hide-popover" commandfor="johanniter" onclick="window.open('https://www.johanniter.de/','_blank');">open external link to www.johanniter.de</button>
+              <button class="button button-default" name="Seenotretter" type="button" command="toggle-popover" commandfor="seenotretter"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Seenotretter</button><button type="button" id="seenotretter" popover command="hide-popover" commandfor="seenotretter" onclick="window.open('https://www.seenotretter.de/','_blank');">open external link to www.seenotretter.de</button>
+              <button class="button button-default" name="DRK" type="button" command="toggle-popover" commandfor="drk"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">DRK</button><button type="button" id="drk" popover command="hide-popover" commandfor="drk" onclick="window.open('https://www.drk.de/','_blank');">open external link to www.drk.de</button>
+              <button class="button button-default" name="Hanseatic" type="button" command="toggle-popover" commandfor="hanseatic"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Hanseatic</button><button type="button" id="hanseatic" popover command="hide-popover" commandfor="hanseatic" onclick="window.open('https://hanseatic-help.org/','_blank');">open external link to hanseatic-help.org</button>
+              <button class="button button-default" name="DGFE" type="button" command="toggle-popover" commandfor="dgfe"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">DGFE</button><button type="button" id="dgfe" popover command="hide-popover" commandfor="dgfe" onclick="window.open('https://www.dgfe.org/spenden','_blank');">open external link to dgfe.org/spenden</button>
+              <button class="button button-default" name="Löwenherz" type="button" command="toggle-popover" commandfor="loewenherz"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Löwenherz</button><button type="button" id="loewenherz" popover command="hide-popover" commandfor="loewenherz" onclick="window.open('https://loewenherz.de/','_blank');">open external link to loewenherz.de</button>
+              <button class="button button-default" name="Welthungerhilfe" type="button" command="toggle-popover" commandfor="welthunger"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Welthungerhilfe</button><button type="button" id="welthunger" popover command="hide-popover" commandfor="welthunger" onclick="window.open('https://www.welthungerhilfe.de/','_blank');">open external link to www.welthungerhilfe.de</button>
+            </nav>
+      <footer>
+        <p>Legal Links</p>
+        <a href="https://www.failxontour.de/privacy">Privacy Policy</a> | <a href="https://felix.bauerschaefer.com/datenschutz">Datenschutzerklärung (German)</a>| <a href="https://felix.bauerschaefer.com/impressum">Impressum (German)</a><br> ✔ No frameworks, no tracking, no bullshit.<br>Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a> always KISS
+        <div class="column">
+        <a href="https://yesterweb.org/no-to-web3/" target="_blank" rel="noopener">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/noweb32.gif" alt="Say no to web3">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/roly-saynotoweb3.gif" alt="Say no to web3">
+        </a>
+        <a href="https://lu.tiny-universes.net/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/b-parentaladvisory5.png" alt="Parental Advisory - The internet is a shitty babysiter">
+        </a>
+        <a href="https://hamptonroadspride.org/flags">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/lgbtqia+support.gif" alt="LGBTQIA+ Support or die, we got progress to do!">
+        </a>
+        <a href="https://blagi.neocities.org/">
+            <img class="gif" loading="lazy" width="88" height="31" src="images/bestviewed.gif" alt="Best viewed with a computer">
+        </a>
+        <br>
+        <iframe width="88" height="31" src="//incr.easrng.net/badge?key=changeme" style="background: url(images/bg.gif)" title="increment badge"></iframe>
+        <a href="https://www.linuxmint.com/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/gnu-linux.gif" alt="This website was made with GNU/Linux">
+        </a>
+        <a href="https://discuss.techlore.tech/t/discord-is-a-privacy-nightmare/7007">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/discord-no-way.gif" alt="F#+? off Discord">
+        </a>
+        <a href="https://wikiless.tiekoetter.com/wiki/Criticism_of_Facebook?lang=en">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/fckfb.gif" alt="F#+? off Facebook">
+        </a>
+        <a href="https://fuckoffgoogle.de/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/google_stand.gif" alt="F#+? off Google">
+        </a>
+        <a href="https://www.amazon.de/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/sucks.gif" alt="dont click it">
+        </a>
+        <a href="https://jointhefediverse.net/learn/?lang=en-us">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/neo-fedi.gif" alt="Join the fediverse now">
+        </a>
+        <a href="https://variety.com/2025/digital/news/deerhoof-remove-catalog-from-spotify-daniel-ek-ai-investment-1236443990/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/shitify.gif" alt="when you love music but hate artists">
+        </a>
+        <a href="https://afd-verbot.jetzt/en">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/antinazi.gif" alt="how many nazis do you need to turn in a light bulb, nein">
+        </a>
+        <br>
+        <a href="https://wiki.selfhtml.org/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/got_html.gif" alt="got html?">
+        </a>
+        <a href="https://www.w3.org/developers/tools/">
+          <img class="gif" loading="lazy" width="88" height="31" src="images/I_heart_validator_lg.png" alt="I heart validator">
+        </a>
+        <a href="http://validator.w3.org/">
+          <img class="gif" loading="lazy" width="88" height="31" style="border:0;" src="images/valid-html5.gif" alt="[Valid HTML]" title="Validate my HTML">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img class="gif" loading="lazy" style="border:0;width:88px;height:31px"
+            src="images/vcss-blue.png"
+            alt="[Valid CSS!]"
+            title="Validate my CSS">
+        </a>
+        <a href="http://validator.w3.org/feed/check.cgi?url=https%3A//www.failxontour.de/rss">
+          <img class="gif" loading="lazy" width="88" height="31" style="border:0;" src="images/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed">
+        </a>
+        <br>
+        <a href="https://cadence.moe/blog/2024-10-05-created-by-a-human-badges">
+          <img class="gif" loading="lazy" width="167" height="61" src="images/created-by-a-human-with-a-heart-3x.png" alt="This site was made by a human and this is the badge to show it">
+        </a>
+        <a href="https://www.htmlhobbyist.com/?webring=htmlhobbyist">
+          <img class="gif" loading="lazy" width="103" height="59" src="images/stamp-yrownwebsite.png" alt="Maybe you should make a website?">
+        </a>
+        <a href="https://www.htmlhobbyist.com/">
+          <img class="gif" loading="lazy" width="68" height="61" src="images/html-hobbyist-badge.svg" alt="I am an HTML Hobbyist" style="border:none;">
+        </a>
+        </div>
+        <a href="https://github.com/failxontour/failxontour.de">failxontour.de</a> © 2025 by <a href="https://failxontour.de">failxontour</a> is licensed under <a href="/cc-by-nc-sa-4.0.LICENSE">CC BY-NC-SA 4.0</a><img src="svgs/cc/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;display:inline-block;"><img src="svgs/cc/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;display:inline-block;"><img src="svgs/cc/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;display:inline-block;"><img src="svgs/cc/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;display:inline-block;">
+        <p>last time updated<p id="lastupdated"></p>
+        <p id="cookies"></p>
+        <span>🍽️ now serving</span>
+        <a href="https://www.digits.net" target="_blank"><img style="margin:auto;" src="https://counter.digits.net/?counter={bc0f90d3-04a4-0eb4-8130-f967bf5c9194}&template=simple&digits=10&rightface&zerofill&charset=9"  alt="Hit Counter by Digits"></a>
+      </footer>
+    </div>
+  </div>
+    <a href="https://www.deviantart.com/kidicarusloki/art/Shego-Flexing-1k-Special-952350503">
+      <p>shego flexing gif by kidicarusloki</p><img alt="Shego Flexing [1k Special]" style="text-align:right;align-self: flex-end;float: right;position: absolute;right: 0;z-index: -1;width: 35em;" src="/images/shego.gif">
+    </a>
+    <script>    
+      const date = new Date(document.lastModified);
+      document.getElementById("lastupdated").innerHTML = date;        
+      function getCookies() {
+      document.getElementById("cookies").innerHTML =
+          document.cookie;
+      }
+    </script>
+    <script
+        src="js/databuddy.js"
+        data-client-id="fio8_6lbk64kTkpAlEIwk"
+        data-track-hash-changes="true"
+        data-track-attributes="true"
+        data-track-outgoing-links="true"
+        data-track-interactions="true"
+        data-track-engagement="true"
+        data-track-scroll-depth="true"
+        data-track-exit-intent="true"
+        data-track-bounce-rate="true"
+        data-track-web-vitals="true"
+        data-track-errors="true"
+        data-enable-batching="true"
+        crossOrigin="anonymous"
+        async
+      >
+    </script>
+
+</body>
+</html>
