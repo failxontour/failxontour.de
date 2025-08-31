@@ -1,5 +1,3 @@
-- name: Lighthouse CI Action
-  uses: treosh/lighthouse-ci-action@12.6.1
 name: Lighthouse CI
 on: push
 jobs:
