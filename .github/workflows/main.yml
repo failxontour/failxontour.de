@@ -13,6 +13,6 @@ jobs:
           urls: |
             https://failxontour.de/
             https://failxontour.de/blog
-          budgetPath: ./budget.json # test performance budgets
+          budgetPath: ./lighthouserc.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
