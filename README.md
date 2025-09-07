@@ -7,7 +7,7 @@
 
 
 
-hey this is my public git repository for my personal blog | videos | music | website | email server | various other things | linkaggregator on https://failxontour.de | https://www.failxontour.de
+hey this is my public git repository for my personal frontend blog | videos | music | website | various other things | linkaggregator on https://failxontour.de | https://www.failxontour.de
 
 I host my website on [ALL-INKL.COM - Neue Medien Münnich](https://all-inkl.com/en/legal-notice/) on a Ubuntu server currently with a LA(M)P stack. The M is missing as I have no active MySQL (MariaDB) base.
 
@@ -23,13 +23,21 @@ Dependencies
 - [Hashover](https://github.com/jacobwb/hashover/)
 - [Databuddy Analytics JS](https://github.com/databuddy-analytics/Databuddy)
 - [Apache Block Bad Bots](https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker)
+- [Composer](https://github.com/composer/composer)
+- [Modernizr](https://modernizr.com/)
 
-License for most of my images, videos, music.:
+Blog
+- [Obsidian Copy as HTML Plugin](https://github.com/mvdkwast/obsidian-copy-as-html)
+
+For testing my homepage I mainly use the latest versions of Brave & Blisk Browser currently with a virtual/emulated mobile set
+consisting of iPhone 16, Google Pixel 8, Samsung Galaxy S24
+
+License for most of my content, images, videos, music and anything else if not especially stated otherwise.:
 
 [CC-BY-NC-SA 4.0](https://failxontour.de/cc-by-nc-sa-4.0.LICENSE)
 
 Contains images from
-[Pixabay](https://failxontour.de/pixabay-content.LICENSE) & [Unsplash](https://failxontour.de/unsplash.LICENSE) licensed under their respective linceses
+[Pixabay](https://failxontour.de/pixabay-content.LICENSE) & [Unsplash](https://failxontour.de/unsplash.LICENSE) licensed under their respective licenses
 
 The project itself is licensed under
 [AGPL-3.0](https://failxontour.de/agpl-3.0.LICENSE) please redistribute under the same license terms if you fork my project
