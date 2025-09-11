@@ -7,7 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit9622dd827becd4430ae91af9e0a4face
 {
     public static $files = array (
+        'fbc4428972f06a5eca49dba8e23d63f6' => __DIR__ . '/..' . '/phpish/http/http.php',
+        '1984e4722b8b43f28bc5fd137c755104' => __DIR__ . '/..' . '/phpish/link_header/link_header.php',
         '757772e28a0943a9afe83def8db95bdf' => __DIR__ . '/..' . '/mf2/mf2/Mf2/Parser.php',
+        '738dbba06e2589aabc0c19f2064e4c0f' => __DIR__ . '/..' . '/phpish/webmention/webmention.php',
     );
 
     public static $prefixLengthsPsr4 = array (

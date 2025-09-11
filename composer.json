@@ -1,6 +1,7 @@
 {
     "require": {
         "nikic/php-parser": "^5.6",
-        "mf2/mf2": "^0.5.0"
+        "mf2/mf2": "^0.5.0",
+        "phpish/webmention": "^1.0"
     }
 }

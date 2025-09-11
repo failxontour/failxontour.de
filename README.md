@@ -25,6 +25,8 @@ Dependencies
 - [Apache Block Bad Bots](https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker)
 - [Composer](https://github.com/composer/composer)
 - [Modernizr](https://modernizr.com/)
+- [php-mf2 | microformats2-parser](https://github.com/microformats/php-mf2)
+- [webmention](https://github.com/phpish/webmention)
 
 Blog
 - [Obsidian Copy as HTML Plugin](https://github.com/mvdkwast/obsidian-copy-as-html)
