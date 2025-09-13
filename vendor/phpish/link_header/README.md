@@ -2,18 +2,15 @@
 
 Link header (RFC 5988) parser.
 
-
 ## Namespace
 
 `phpish\link_header`
 
-
 ## Functions
 
-array __parse__( string _$link_value_ )
+array **parse**( string _$link_value_ )
 
-array __parse__( array _$link_values_ )
-
+array **parse**( array _$link_values_ )
 
 ## Usage
 

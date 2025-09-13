@@ -1,49 +1,83 @@
 <!-- Thanks for viewing the source code. I don't minify for readability. © 2025 - FailXontour -->
-<!DOCTYPE html>
+<!doctype html>
 <html class="theme-auto" lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FailXontour</title>
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="failxontour">
-    <link rel="manifest" href="images/site.webmanifest">
-    <meta name="description" content="find all my hot links to socials, blog'n' stuff here">
-    <meta name="keywords" content="failxontour, failx">
-    <link rel="canonical" href="https://failxontour.de/venexim">
-    <meta name="author" content="failxontour">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/brands.css">
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="failxontour" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <meta
+      name="description"
+      content="find all my hot links to socials, blog'n' stuff here"
+    />
+    <meta name="keywords" content="failxontour, failx" />
+    <link rel="canonical" href="https://failxontour.de/venexim" />
+    <meta name="author" content="failxontour" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/brands.css" />
   </head>
-<body onload="getCookies()">
+  <body onload="getCookies()">
     <div class="container">
       <div class="column">
-        <h1>This is some music I created under my artist name venexim with bandlab</h1>
-          <img class="container" alt="Gatos" src="images/gatos.jpeg">
-          <p><a href="audio/Gato_Chiptune.m4a" download>Gato Chiptune download</a></p>
-          <audio controls src="/audio/Gato_Chiptune.m4a"></audio>
-          <a href="../cc-by-nc-sa-4.0.LICENSE"><p>Cover &amp; Music | License CC-BY-NC-SA<img style="margin:auto;" width="88" height="31" alt="CC-BY-NC-SA" src="../images/by-nc-sa.png"></p></a>
-          <img class="container" alt="Mice" src="images/mice.jpeg">
-          <p><a href="audio/Mice.m4a" download>Mice download</a></p>
-          <audio controls src="/audio/Mice.m4a"></audio>
-          <a href="../cc-by-nc-sa-4.0.LICENSE"><p>Cover &amp; Music | License CC-BY-NC-SA<img style="margin:auto;" width="88" height="31" alt="CC-BY-NC-SA" src="../images/by-nc-sa.png"></p></a>
-      <a href="/">go back to link list</a><br>
-      <p>© 2025 - FailXontour</p>
-      last time updated<p id="lastupdated"></p>
-      <p id="cookies"></p>
+        <h1>
+          This is some music I created under my artist name venexim with bandlab
+        </h1>
+        <img class="container" alt="Gatos" src="images/gatos.jpeg" />
+        <p>
+          <a href="audio/Gato_Chiptune.m4a" download>Gato Chiptune download</a>
+        </p>
+        <audio controls src="/audio/Gato_Chiptune.m4a"></audio>
+        <a href="../cc-by-nc-sa-4.0.LICENSE"
+          ><p>
+            Cover &amp; Music | License CC-BY-NC-SA<img
+              style="margin: auto"
+              width="88"
+              height="31"
+              alt="CC-BY-NC-SA"
+              src="../images/by-nc-sa.png"
+            /></p
+        ></a>
+        <img class="container" alt="Mice" src="images/mice.jpeg" />
+        <p><a href="audio/Mice.m4a" download>Mice download</a></p>
+        <audio controls src="/audio/Mice.m4a"></audio>
+        <a href="../cc-by-nc-sa-4.0.LICENSE"
+          ><p>
+            Cover &amp; Music | License CC-BY-NC-SA<img
+              style="margin: auto"
+              width="88"
+              height="31"
+              alt="CC-BY-NC-SA"
+              src="../images/by-nc-sa.png"
+            /></p
+        ></a>
+        <a href="/">go back to link list</a><br />
+        <p>© 2025 - FailXontour</p>
+        last time updated
+        <p id="lastupdated"></p>
+        <p id="cookies"></p>
+      </div>
     </div>
-  </div>
-      <script>    
+    <script>
       const date = new Date(document.lastModified);
-      document.getElementById("lastupdated").innerHTML = date;        
+      document.getElementById("lastupdated").innerHTML = date;
       function getCookies() {
-      document.getElementById("cookies").innerHTML =
-          document.cookie;
+        document.getElementById("cookies").innerHTML = document.cookie;
       }
     </script>
-</body>
+  </body>
 </html>

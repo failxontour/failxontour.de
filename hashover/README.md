@@ -1,13 +1,13 @@
-HashOver 1.0.3rc4
-========
+# HashOver 1.0.3rc4
+
 **HashOver** is a PHP comment system intended as a replacement for services like Disqus. HashOver is free and open source software, under the [GNU Affero General Public License](http://www.gnu.org/licenses/agpl.html). HashOver adds a "comment section" to any website, by placing a few simple lines of JavaScript or PHP to the source code of any webpage. HashOver is a self-hosted system and allows completely anonymous comments to be posted, the only required information is the comment itself.
 
-Notice
----
+## Notice
+
 This is the current stable version of HashOver, it is not actively developed, instead work on the next version is done on the "hashover-next" repository. Code contributions ("Pull Requests") to/of this repository that add new functionality will be rejected. Please submit issues, clone and commit changes to the following repository instead: https://github.com/jacobwb/hashover-next
 
-Notable Features
----
+## Notable Features
+
 <table cellpadding="2" cellspacing="2" width="100%">
 	<tbody>
 		<tr>
@@ -47,8 +47,7 @@ Notable Features
 	</tbody>
 </table>
 
-Documentation
-===
+# Documentation
 
 **Prerequisites**
 
@@ -60,7 +59,7 @@ There are two methods of using HashOver, both methods require doing the followin
 4. Give directories and PHP files permissions "0755" (readable by all, writable by owner, executable by all).
 5. Give "hashover/pages" directory permission "0777" (readable, writable and executable by all).
 
-> It is not recommended that permissions "0777" ever be used. For security reasons, the "hashover/pages" directory should be "given" (chown) to the user that the server is configured to execute PHP scripts as, for example "www-data". And then simply give the "hashover/pages" directory permissions "0755".**
+> It is not recommended that permissions "0777" ever be used. For security reasons, the "hashover/pages" directory should be "given" (chown) to the user that the server is configured to execute PHP scripts as, for example "www-data". And then simply give the "hashover/pages" directory permissions "0755".\*\*
 
 **Required Setup**
 
@@ -87,7 +86,7 @@ Once the files have successfully been downloaded, extracted, proper permissions 
 **PHP method**
 
 ```
-<?php $mode = 'php'; include('hashover/comments.php'); ?> 
+<?php $mode = 'php'; include('hashover/comments.php'); ?>
 ```
 
 **Optional**
@@ -134,7 +133,7 @@ Or load the comment's JavaScript asynchronously:
 
 **Optional Settings**
 
-In the file `hashover/scripts/settings.php` settings for things such as language, default name, HTML design template, avatar icons, "Popular Comments", spam checking, default timezone, and more may be adjusted. 
+In the file `hashover/scripts/settings.php` settings for things such as language, default name, HTML design template, avatar icons, "Popular Comments", spam checking, default timezone, and more may be adjusted.
 
 **Styling the Comments**
 

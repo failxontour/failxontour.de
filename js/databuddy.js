@@ -1,8 +1,8 @@
 (() => {
   function generateUUIDv4() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
       const r = (Math.random() * 16) | 0;
-      const v = c === 'x' ? r : (r & 0x3) | 0x8;
+      const v = c === "x" ? r : (r & 0x3) | 0x8;
       return v.toString(16);
     });
   }
@@ -18,7 +18,10 @@
         ...config.defaultHeaders,
       };
       for (const [key, value] of Object.entries(headers)) {
-        if (typeof value === "function" || (value && typeof value.then === "function")) {
+        if (
+          typeof value === "function" ||
+          (value && typeof value.then === "function")
+        ) {
           this.dynamicHeaderFns[key] = value;
         } else {
           this.staticHeaders[key] = value;
@@ -33,13 +36,16 @@
         Object.entries(this.dynamicHeaderFns).map(async ([key, fn]) => [
           key,
           await (typeof fn === "function" ? fn() : fn),
-        ])
+        ]),
       );
       return { ...this.staticHeaders, ...Object.fromEntries(dynamicEntries) };
     }
 
     addHeader(key, value) {
-      if (typeof value === "function" || (value && typeof value.then === "function")) {
+      if (
+        typeof value === "function" ||
+        (value && typeof value.then === "function")
+      ) {
         this.dynamicHeaderFns[key] = value;
         delete this.staticHeaders[key];
       } else {
@@ -67,7 +73,8 @@
 
         if (response.status !== 200 && response.status !== 202) {
           if (
-            ((response.status >= 500 && response.status < 600) || response.status === 429) &&
+            ((response.status >= 500 && response.status < 600) ||
+              response.status === 429) &&
             retryCount < this.maxRetries
           ) {
             const jitter = Math.random() * 0.3 + 0.85;
@@ -75,7 +82,9 @@
             await new Promise((resolve) => setTimeout(resolve, delay));
             return this.post(url, data, options, retryCount + 1);
           }
-          throw new Error(`HTTP error! status: ${response.status} for URL: ${url}`);
+          throw new Error(
+            `HTTP error! status: ${response.status} for URL: ${url}`,
+          );
         }
 
         try {
@@ -85,7 +94,8 @@
           return text ? JSON.parse(text) : null;
         }
       } catch (error) {
-        const isNetworkError = error.name === "TypeError" || error.name === "NetworkError";
+        const isNetworkError =
+          error.name === "TypeError" || error.name === "NetworkError";
         if (retryCount < this.maxRetries && isNetworkError) {
           const jitter = Math.random() * 0.3 + 0.85;
           const delay = this.initialRetryDelay * 2 ** retryCount * jitter;
@@ -206,7 +216,10 @@
         const SESSION_TIMEOUT = 30 * 60 * 1000; // 30 minutes
 
         if (sessionAge < SESSION_TIMEOUT) {
-          sessionStorage.setItem("did_session_timestamp", Date.now().toString());
+          sessionStorage.setItem(
+            "did_session_timestamp",
+            Date.now().toString(),
+          );
           return storedId;
         }
         sessionStorage.removeItem("did_session");
@@ -267,7 +280,7 @@
             () => {
               this.interactionCount++;
             },
-            { passive: true }
+            { passive: true },
           );
         }
       } else {
@@ -313,16 +326,24 @@
 
     trackScrollDepth() {
       if (this.isServer()) return;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
-      const scrollPercent = Math.min(100, Math.round((currentScroll / scrollHeight) * 100));
+      const scrollPercent = Math.min(
+        100,
+        Math.round((currentScroll / scrollHeight) * 100),
+      );
       this.maxScrollDepth = Math.max(this.maxScrollDepth, scrollPercent);
     }
 
     async send(event) {
-      const eventData = event.type === "track" && event.payload ? event.payload : event;
+      const eventData =
+        event.type === "track" && event.payload ? event.payload : event;
 
-      if (this.options.disabled || (this.options.filter && !this.options.filter(eventData))) {
+      if (
+        this.options.disabled ||
+        (this.options.filter && !this.options.filter(eventData))
+      ) {
         return Promise.resolve();
       }
       if (this.options.enableBatching && !event.isForceSend) {
@@ -338,7 +359,10 @@
       this.batchQueue.push(event);
 
       if (this.batchTimer === null) {
-        this.batchTimer = setTimeout(() => this.flushBatch(), this.options.batchTimeout);
+        this.batchTimer = setTimeout(
+          () => this.flushBatch(),
+          this.options.batchTimeout,
+        );
       }
 
       if (this.batchQueue.length >= this.options.batchSize) {
@@ -371,7 +395,11 @@
           return beaconResult;
         }
 
-        const result = await this.api.fetch("/batch", batchEvents, fetchOptions);
+        const result = await this.api.fetch(
+          "/batch",
+          batchEvents,
+          fetchOptions,
+        );
         return result;
       } catch (error) {
         const isNetworkError = !error.status && error.name === "TypeError";
@@ -411,7 +439,7 @@
         if (success) {
           return { success: true };
         }
-      } catch (e) { }
+      } catch (e) {}
 
       return null;
     }
@@ -484,7 +512,7 @@
         if (beaconResult) {
           return beaconResult;
         }
-      } catch (e) { }
+      } catch (e) {}
 
       return this.send(payload);
     }
@@ -493,9 +521,13 @@
       if (this.isServer()) return null;
 
       try {
-        const eventData = event.type === "track" && event.payload ? event.payload : event;
+        const eventData =
+          event.type === "track" && event.payload ? event.payload : event;
 
-        if (this.options.disabled || (this.options.filter && !this.options.filter(eventData))) {
+        if (
+          this.options.disabled ||
+          (this.options.filter && !this.options.filter(eventData))
+        ) {
           return null;
         }
 
@@ -523,7 +555,7 @@
             if (success) {
               return { success: true };
             }
-          } catch (e) { }
+          } catch (e) {}
         }
 
         return null;
@@ -544,7 +576,10 @@
 
       if (!this.isServer()) {
         sessionStorage.setItem("did_session", this.sessionId);
-        sessionStorage.setItem("did_session_start", this.sessionStartTime.toString());
+        sessionStorage.setItem(
+          "did_session_start",
+          this.sessionStartTime.toString(),
+        );
       }
     }
 
@@ -565,7 +600,8 @@
     collectNavigationTiming() {
       if (this.isServer() || !this.options.trackPerformance) return {};
 
-      const clampTime = (v) => typeof v === "number" ? Math.min(60000, Math.max(0, v)) : v;
+      const clampTime = (v) =>
+        typeof v === "number" ? Math.min(60000, Math.max(0, v)) : v;
 
       try {
         const navEntry = window.performance?.getEntriesByType("navigation")[0];
@@ -573,11 +609,22 @@
 
         return {
           load_time: clampTime(Math.round(navEntry.loadEventEnd)),
-          dom_ready_time: clampTime(Math.round(navEntry.domContentLoadedEventEnd)),
+          dom_ready_time: clampTime(
+            Math.round(navEntry.domContentLoadedEventEnd),
+          ),
           dom_interactive: clampTime(Math.round(navEntry.domInteractive)),
-          ttfb: clampTime(Math.round(navEntry.responseStart - navEntry.requestStart)),
-          request_time: clampTime(Math.round(navEntry.responseEnd - navEntry.requestStart)),
-          render_time: Math.max(0, Math.round(navEntry.domComplete - navEntry.domContentLoadedEventEnd)),
+          ttfb: clampTime(
+            Math.round(navEntry.responseStart - navEntry.requestStart),
+          ),
+          request_time: clampTime(
+            Math.round(navEntry.responseEnd - navEntry.requestStart),
+          ),
+          render_time: Math.max(
+            0,
+            Math.round(
+              navEntry.domComplete - navEntry.domContentLoadedEventEnd,
+            ),
+          ),
         };
       } catch (e) {
         return {};
@@ -600,7 +647,11 @@
     detectBot() {
       if (typeof window === "undefined") return false;
 
-      return navigator.webdriver || !navigator.plugins.length || !navigator.languages.length;
+      return (
+        navigator.webdriver ||
+        !navigator.plugins.length ||
+        !navigator.languages.length
+      );
     }
 
     setupBotDetection() {
@@ -612,8 +663,8 @@
           () => {
             this.hasInteracted = true;
           },
-          { once: true, passive: true }
-        )
+          { once: true, passive: true },
+        );
       }
     }
 
@@ -623,12 +674,16 @@
       window.addEventListener(
         "scroll",
         () => {
-          const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
           const currentScroll = window.scrollY;
-          const scrollPercent = Math.min(100, Math.round((currentScroll / scrollHeight) * 100));
+          const scrollPercent = Math.min(
+            100,
+            Math.round((currentScroll / scrollHeight) * 100),
+          );
           this.maxScrollDepth = Math.max(this.maxScrollDepth, scrollPercent);
         },
-        { passive: true }
+        { passive: true },
       );
 
       window.addEventListener("mouseout", (e) => {
@@ -640,8 +695,9 @@
         if (link?.href) {
           try {
             const linkUrl = new URL(link.href);
-            if (linkUrl.origin === window.location.origin) this.isInternalNavigation = true;
-          } catch (err) { }
+            if (linkUrl.origin === window.location.origin)
+              this.isInternalNavigation = true;
+          } catch (err) {}
         }
       });
 
@@ -679,7 +735,10 @@
       // Clamp page_count, interaction_count, time_on_page
       const page_count = Math.min(10000, this.pageCount);
       const interaction_count = Math.min(10000, this.interactionCount);
-      const time_on_page = Math.min(86400, Math.round((Date.now() - this.pageEngagementStart) / 1000));
+      const time_on_page = Math.min(
+        86400,
+        Math.round((Date.now() - this.pageEngagementStart) / 1000),
+      );
 
       const exitEvent = {
         type: "track",
@@ -733,7 +792,10 @@
         this.webVitalsReportTimeoutId = null;
       }
       if (this.webVitalsVisibilityChangeHandler) {
-        document.removeEventListener("visibilitychange", this.webVitalsVisibilityChangeHandler);
+        document.removeEventListener(
+          "visibilitychange",
+          this.webVitalsVisibilityChangeHandler,
+        );
         this.webVitalsVisibilityChangeHandler = null;
       }
       if (this.webVitalsPageHideHandler) {
@@ -756,10 +818,15 @@
         const metrics = { fcp: null, lcp: null, cls: 0, fid: null, inp: null };
         let reported = false;
 
-        const clamp = (v) => typeof v === "number" ? Math.min(60000, Math.max(0, v)) : v;
+        const clamp = (v) =>
+          typeof v === "number" ? Math.min(60000, Math.max(0, v)) : v;
 
         const report = () => {
-          if (reported || !Object.values(metrics).some((m) => m !== null && m !== 0)) return;
+          if (
+            reported ||
+            !Object.values(metrics).some((m) => m !== null && m !== 0)
+          )
+            return;
           reported = true;
           this.trackWebVitals({
             timestamp: Date.now(),
@@ -775,11 +842,13 @@
         const observe = (type, callback) => {
           try {
             if (PerformanceObserver.supportedEntryTypes?.includes(type)) {
-              const observer = new PerformanceObserver((list) => callback(list.getEntries()));
+              const observer = new PerformanceObserver((list) =>
+                callback(list.getEntries()),
+              );
               observer.observe({ type, buffered: true });
               this.webVitalObservers.push(observer);
             }
-          } catch (e) { }
+          } catch (e) {}
         };
 
         observe("paint", (entries) => {
@@ -821,20 +890,28 @@
         this.webVitalsVisibilityChangeHandler = () => {
           if (document.visibilityState === "hidden") report();
         };
-        document.addEventListener("visibilitychange", this.webVitalsVisibilityChangeHandler, {
+        document.addEventListener(
+          "visibilitychange",
+          this.webVitalsVisibilityChangeHandler,
+          {
+            once: true,
+          },
+        );
+
+        this.webVitalsPageHideHandler = report;
+        window.addEventListener("pagehide", this.webVitalsPageHideHandler, {
           once: true,
         });
 
-        this.webVitalsPageHideHandler = report;
-        window.addEventListener("pagehide", this.webVitalsPageHideHandler, { once: true });
-
         this.webVitalsReportTimeoutId = setTimeout(report, 10_000);
-      } catch (e) { }
+      } catch (e) {}
     }
 
     getConnectionInfo() {
       const connection =
-        navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        navigator.connection ||
+        navigator.mozConnection ||
+        navigator.webkitConnection;
 
       if (!connection) {
         return {
@@ -902,7 +979,8 @@
         screenWidth = null;
         screenHeight = null;
       }
-      const screen_resolution = screenWidth && screenHeight ? `${screenWidth}x${screenHeight}` : null;
+      const screen_resolution =
+        screenWidth && screenHeight ? `${screenWidth}x${screenHeight}` : null;
 
       // Validate referrer and path as URLs
       let referrer = this.global?.referrer || document.referrer || "direct";
@@ -970,7 +1048,7 @@
         if (beaconResult) {
           return beaconResult;
         }
-      } catch (e) { }
+      } catch (e) {}
 
       return this.send(errorEvent);
     }
@@ -979,7 +1057,8 @@
       if (this.isServer()) return;
 
       // Clamp fcp and lcp to 60000
-      const clamp = (v) => typeof v === "number" ? Math.min(60000, Math.max(0, v)) : v;
+      const clamp = (v) =>
+        typeof v === "number" ? Math.min(60000, Math.max(0, v)) : v;
 
       const webVitalsEvent = {
         type: "web_vitals",
@@ -1006,14 +1085,16 @@
         if (beaconResult) {
           return beaconResult;
         }
-      } catch (e) { }
+      } catch (e) {}
 
       return this.send(webVitalsEvent);
     }
   };
 
   function h(a) {
-    return a.replace(/([-_][a-z])/gi, (e) => e.toUpperCase().replace("-", "").replace("_", ""));
+    return a.replace(/([-_][a-z])/gi, (e) =>
+      e.toUpperCase().replace("-", "").replace("_", ""),
+    );
   }
 
   const d = class extends l {
@@ -1066,7 +1147,7 @@
                       r.getAttribute("alt"),
                   });
                 }
-              } catch (e) { }
+              } catch (e) {}
             }
           }
         });
@@ -1116,7 +1197,11 @@
           const r = t.target;
           const i = r.closest("button");
           const n = r.closest("a");
-          const s = i?.getAttribute("data-track") ? i : n?.getAttribute("data-track") ? n : null;
+          const s = i?.getAttribute("data-track")
+            ? i
+            : n?.getAttribute("data-track")
+              ? n
+              : null;
           if (s) {
             const o = {};
             for (const p of s.attributes) {
@@ -1135,7 +1220,11 @@
       let i;
       let n;
 
-      if (this.lastPath && this.pageEngagementStart && this.options.trackEngagement) {
+      if (
+        this.lastPath &&
+        this.pageEngagementStart &&
+        this.options.trackEngagement
+      ) {
         this.maxScrollDepth = 0;
         this.interactionCount = 0;
         this.hasExitIntent = false;
@@ -1186,22 +1275,22 @@
       ) {
         // Set up no-op functions for compatibility
         window.databuddy = {
-          track: () => { },
-          screenView: () => { },
-          clear: () => { },
-          flush: () => { },
-          setGlobalProperties: () => { },
-          trackCustomEvent: () => { },
+          track: () => {},
+          screenView: () => {},
+          clear: () => {},
+          flush: () => {},
+          setGlobalProperties: () => {},
+          trackCustomEvent: () => {},
           options: { disabled: true },
         };
 
         window.db = {
-          track: () => { },
-          screenView: () => { },
-          clear: () => { },
-          flush: () => { },
-          setGlobalProperties: () => { },
-          trackCustomEvent: () => { },
+          track: () => {},
+          screenView: () => {},
+          clear: () => {},
+          flush: () => {},
+          setGlobalProperties: () => {},
+          trackCustomEvent: () => {},
         };
 
         return;
@@ -1261,7 +1350,7 @@
             urlParams[key] = value;
           }
         });
-      } catch (e) { }
+      } catch (e) {}
 
       const config = {
         ...globalConfig,
@@ -1280,7 +1369,8 @@
 
       if (config.initialRetryDelay !== undefined) {
         if (config.initialRetryDelay < 50) config.initialRetryDelay = 50;
-        if (config.initialRetryDelay > 10_000) config.initialRetryDelay = 10_000;
+        if (config.initialRetryDelay > 10_000)
+          config.initialRetryDelay = 10_000;
       }
 
       if (config.batchSize !== undefined) {
@@ -1335,8 +1425,10 @@
         screenView: (...args) => window.databuddy?.screenView(...args),
         clear: () => window.databuddy?.clear(),
         flush: () => window.databuddy?.flush(),
-        setGlobalProperties: (...args) => window.databuddy?.setGlobalProperties(...args),
-        trackCustomEvent: (...args) => window.databuddy?.trackCustomEvent(...args),
+        setGlobalProperties: (...args) =>
+          window.databuddy?.setGlobalProperties(...args),
+        trackCustomEvent: (...args) =>
+          window.databuddy?.trackCustomEvent(...args),
       };
     }
 
@@ -1370,7 +1462,7 @@
         window.databuddy.options.disabled = true;
 
         // Override methods to no-ops
-        const noop = () => { };
+        const noop = () => {};
         window.databuddy.track = noop;
         window.databuddy.screenView = noop;
         window.databuddy.trackCustomEvent = noop;
@@ -1380,7 +1472,7 @@
       }
 
       if (window.db) {
-        const noop = () => { };
+        const noop = () => {};
         window.db.track = noop;
         window.db.screenView = noop;
         window.db.trackCustomEvent = noop;
@@ -1389,7 +1481,9 @@
         window.db.setGlobalProperties = noop;
       }
 
-      console.log("Databuddy: Tracking has been disabled. Reload the page for full effect.");
+      console.log(
+        "Databuddy: Tracking has been disabled. Reload the page for full effect.",
+      );
     };
 
     window.databuddyOptIn = () => {
@@ -1403,8 +1497,10 @@
       window.databuddyOptedOut = false;
       window.databuddyDisabled = false;
 
-      console.log("Databuddy: Tracking has been enabled. Reload the page for full effect.");
-    };
+      console.log(
+        "Databuddy: Tracking has been enabled. Reload the page for full effect.",
+      );
+      };
 
     // Check if user wants to opt out via URL parameter
     try {

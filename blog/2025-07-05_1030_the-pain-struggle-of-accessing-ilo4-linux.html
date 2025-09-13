@@ -1,43 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="theme-auto" lang="en">
-<head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The pain struggle of accessing ilo4 on Linux</title>
-   <link rel="icon" type="image/png" href="../images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
-    <link rel="shortcut icon" href="../images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="failxontour">
-    <link rel="manifest" href="../images/site.webmanifest">
-    <meta name="description" content="find all my hot links to socials, blog'n' stuff here">
-    <meta name="keywords" content="failxontour, failx">
-    <meta rel="canonical" href="https://failxontour.de/videos">
-    <meta name="author" content="failxontour">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/brands.css">
-</head>
-<body>
-<div class="container-justify">
-<h1 data-heading="The pain struggle of accessing ilo4 on Linux" dir="auto">The pain struggle of accessing ilo4 on Linux</h1>
-<p dir="auto">here I rant a bit about my struggles to run ilo4 on linux mint 22.1 having to run outdated and depreceated server hardware, software never been an easy task. But if it's for home computing / home server administration and just now wanting to recover a backup. It becomes apparent on how much knowledge you need to aquire first as sysadmin to just work this crap. Sorry for my explicit choice of words here.</p>
-<p dir="auto">Seriously I don't know how many hoops I tried jumping with getting it to start under Linux Mint.<br>
-Problem is my enviorment doesn't support a launch from .NET framework duh. Linux so prior to fiddeling arround in linux i just launched a gnome box with tiny11_pe_x64 and accessed the ilo remote console from there with iexplore. Needless to say this was a pain in the butt.</p>
-<p dir="auto">So I thought to myself you know I can probably get these Java Applet / Java Web Start things to run. Well one option is completly depreceated and obsolete as Java dropped support for the Java Plugin a far while back on Mozilla Firefox for security reasons. Great... now what. Try the applet.</p>
-<p dir="auto">Uuuuuh this ain't good I got no experience with Java on linux and I know for gaming reasons and well looking at their license model that it's difficult to find the right working version.</p>
-<p dir="auto">So far from what I've gathered is that Java package under linux has a opensourced deriviant package.</p>
-<pre><code>openjdk-jre’
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The pain struggle of accessing ilo4 on Linux</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="failxontour" />
+    <link rel="manifest" href="../images/site.webmanifest" />
+    <meta
+      name="description"
+      content="find all my hot links to socials, blog'n' stuff here"
+    />
+    <meta name="keywords" content="failxontour, failx" />
+    <meta rel="canonical" href="https://failxontour.de/videos" />
+    <meta name="author" content="failxontour" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/brands.css" />
+  </head>
+  <body>
+    <div class="container-justify">
+      <h1
+        data-heading="The pain struggle of accessing ilo4 on Linux"
+        dir="auto"
+      >
+        The pain struggle of accessing ilo4 on Linux
+      </h1>
+      <p dir="auto">
+        here I rant a bit about my struggles to run ilo4 on linux mint 22.1
+        having to run outdated and depreceated server hardware, software never
+        been an easy task. But if it's for home computing / home server
+        administration and just now wanting to recover a backup. It becomes
+        apparent on how much knowledge you need to aquire first as sysadmin to
+        just work this crap. Sorry for my explicit choice of words here.
+      </p>
+      <p dir="auto">
+        Seriously I don't know how many hoops I tried jumping with getting it to
+        start under Linux Mint.<br />
+        Problem is my enviorment doesn't support a launch from .NET framework
+        duh. Linux so prior to fiddeling arround in linux i just launched a
+        gnome box with tiny11_pe_x64 and accessed the ilo remote console from
+        there with iexplore. Needless to say this was a pain in the butt.
+      </p>
+      <p dir="auto">
+        So I thought to myself you know I can probably get these Java Applet /
+        Java Web Start things to run. Well one option is completly depreceated
+        and obsolete as Java dropped support for the Java Plugin a far while
+        back on Mozilla Firefox for security reasons. Great... now what. Try the
+        applet.
+      </p>
+      <p dir="auto">
+        Uuuuuh this ain't good I got no experience with Java on linux and I know
+        for gaming reasons and well looking at their license model that it's
+        difficult to find the right working version.
+      </p>
+      <p dir="auto">
+        So far from what I've gathered is that Java package under linux has a
+        opensourced deriviant package.
+      </p>
+      <pre><code>openjdk-jre’
 </code></pre>
-<p dir="auto">Then you also have the official sunjava versions available from you guessed it Java itself. Well since my ProLiant Microserver Gen8 been released 10 yrs ago things changed. And Oracle (parent company of Java) changed with it. Completly reworking their license model to only allow devs who pay a fee to access the java sdks with it came name changes dropped support for legacy stuff so an so fourth. Now you get the benefit of having to login to download a legacy java version frustrated I gave up. And in some github post found compressed links to download these versions oh there is even a whole project dedicated to downloading it outside of oracle. Why bother with locking it down then Oracle?</p>
-<p dir="auto">Well but you wish the journey stopped here nooooo.... how do you actually run these now. Well according to java you just run javaws and get the ilo4 associated .jnlp file run that through javaws so you pull up the terminal go ./javaws .jnlp file and it starts asks for permission on the outdated tls/ssl licenses that looks sketchy you accept that risk and nothing. It errors out as it won't find the homepage associated what.</p>
-<p dir="auto">So now you go scouring through the internet in hopes of finding anything... well finally found the IcedWebStart, OpenWebStart applications that seems to have been purpose build just for this ocassion for linux users. Nope. Still the same error.</p>
-<p dir="auto">Now I am sitting here sorta rambling and ditching the thought of ever being to access ILO4 again. Because for some reason I can't ssh into the server. And I can't remote console into the server either.</p>
-<p dir="auto">please end my suffering.<br>
-Sorry for being a stupid manchild. This got irratating rather quickly. Maybe once I figure this out i should do a writeup on how I did it.</p>
-<div id="hashover"></div>
-<h2><a href="/blog/" target="_self" rel="noopener nofollow">back to index</a></h2></div>
-<script rel="javascript" src="/hashover/comments.php"></script>
-<noscript>You must have JavaScript enabled to use the comments.</noscript>
-</body>
+      <p dir="auto">
+        Then you also have the official sunjava versions available from you
+        guessed it Java itself. Well since my ProLiant Microserver Gen8 been
+        released 10 yrs ago things changed. And Oracle (parent company of Java)
+        changed with it. Completly reworking their license model to only allow
+        devs who pay a fee to access the java sdks with it came name changes
+        dropped support for legacy stuff so an so fourth. Now you get the
+        benefit of having to login to download a legacy java version frustrated
+        I gave up. And in some github post found compressed links to download
+        these versions oh there is even a whole project dedicated to downloading
+        it outside of oracle. Why bother with locking it down then Oracle?
+      </p>
+      <p dir="auto">
+        Well but you wish the journey stopped here nooooo.... how do you
+        actually run these now. Well according to java you just run javaws and
+        get the ilo4 associated .jnlp file run that through javaws so you pull
+        up the terminal go ./javaws .jnlp file and it starts asks for permission
+        on the outdated tls/ssl licenses that looks sketchy you accept that risk
+        and nothing. It errors out as it won't find the homepage associated
+        what.
+      </p>
+      <p dir="auto">
+        So now you go scouring through the internet in hopes of finding
+        anything... well finally found the IcedWebStart, OpenWebStart
+        applications that seems to have been purpose build just for this
+        ocassion for linux users. Nope. Still the same error.
+      </p>
+      <p dir="auto">
+        Now I am sitting here sorta rambling and ditching the thought of ever
+        being to access ILO4 again. Because for some reason I can't ssh into the
+        server. And I can't remote console into the server either.
+      </p>
+      <p dir="auto">
+        please end my suffering.<br />
+        Sorry for being a stupid manchild. This got irratating rather quickly.
+        Maybe once I figure this out i should do a writeup on how I did it.
+      </p>
+      <div id="hashover"></div>
+      <h2>
+        <a href="/blog/" target="_self" rel="noopener nofollow"
+          >back to index</a
+        >
+      </h2>
+    </div>
+    <script rel="javascript" src="/hashover/comments.php"></script>
+    <noscript>You must have JavaScript enabled to use the comments.</noscript>
+  </body>
 </html>
