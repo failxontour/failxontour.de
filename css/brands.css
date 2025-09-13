@@ -9,23 +9,26 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Only include brand-specific button styling here */
 .button {
-  color:var(--button-text,#000000);
-  background-color:var(--button-background,transparent);
-	border:var(--button-border,none);
-	transition:filter 0.2s ease,transform 0.2s ease;
+  color: var(--button-text, #000000);
+  background-color: var(--button-background, transparent);
+  border: var(--button-border, none);
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
 
 /* Global Button Hover Effect
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button:hover,button:hover {
-	filter:brightness(90%);
-	transform:translateY(-1px);
+.button:hover,
+button:hover {
+  filter: brightness(90%);
+  transform: translateY(-1px);
 }
 
 /* Button Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .icon {
-	filter:var(--icon-filter,none);
+  filter: var(--icon-filter, none);
 }
 
 /* Brand-Specific Styles
@@ -33,61 +36,61 @@
 
 /* Default */
 .button.button-default {
-	--button-text:#ffffff;
-	--button-background:#2dbf0f;
-	--button-border:1px solid #ffffff;
+  --button-text: #ffffff;
+  --button-background: #2dbf0f;
+  --button-border: 1px solid #ffffff;
 }
 
 /* Bluesky */
 .button-bluesky {
-	--button-text:#FFFFFF;
-	--button-background:#1185FE;
+  --button-text: #ffffff;
+  --button-background: #1185fe;
 }
 /* Mastodon */
 .button-mastodon {
-	--button-text:#ffffff;
-	--button-background:#17063B;
-	--button-border:1px solid #FFFFFF;
+  --button-text: #ffffff;
+  --button-background: #17063b;
+  --button-border: 1px solid #ffffff;
 }
 /* Matrix */
 .button-matrix {
-	--button-text:#000000;
-	--button-background:#ffffff;
-	--button-border:1px solid #000000;
+  --button-text: #000000;
+  --button-background: #ffffff;
+  --button-border: 1px solid #000000;
 }
 /* Steam Alt */
 .button-steam-alt {
-	--button-text:#ffffff;
-	background-image:linear-gradient(90deg,#09172a,#072a57,#0c5085);
-	--button-border:1px solid #FFFFFF;
+  --button-text: #ffffff;
+  background-image: linear-gradient(90deg, #09172a, #072a57, #0c5085);
+  --button-border: 1px solid #ffffff;
 }
 /* Weserbeatz, Das Sprotte */
 .button-weserbeatz {
-	--button-text: #000000;
-	--button-background: #ffffff;
-	--button-border: 1px solid #000000;
+  --button-text: #000000;
+  --button-background: #ffffff;
+  --button-border: 1px solid #000000;
 }
 /* Tierschutzverein */
 .button-tierschutzverein {
-	--button-text: #ffffff;
-	--button-background: #8e393d;
-	--button-border: 1px solid #FFFFFF;
+  --button-text: #ffffff;
+  --button-background: #8e393d;
+  --button-border: 1px solid #ffffff;
 }
 /* Rockini, Burnout, Social Car Crew, BMW Crew Nienburg, Die Linke */
 .button-rock {
-	--button-text: #ffffff;
-	--button-background: #000000;
-	--button-border: 1px solid #FFFFFF;
+  --button-text: #ffffff;
+  --button-background: #000000;
+  --button-border: 1px solid #ffffff;
 }
 /* Freibad am Dobben */
 .button-freibad-am-dobben {
-	--button-text: #ffffff;
-	--button-background: #1e59a6;
-	--button-border: 1px solid #FFFFFF;
+  --button-text: #ffffff;
+  --button-background: #1e59a6;
+  --button-border: 1px solid #ffffff;
 }
 /* Rally Sulingen */
 .button-rally-sulingen {
-	--button-text: #ffffff;
-	--button-background: #430077;
-	--button-border: 1px solid #FFFFFF;
+  --button-text: #ffffff;
+  --button-background: #430077;
+  --button-border: 1px solid #ffffff;
 }

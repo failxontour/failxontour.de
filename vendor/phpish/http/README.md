@@ -2,11 +2,9 @@
 
 Convenience wrapper around [cURL](http://php.net/manual/en/book.curl.php).
 
-
 ## Requirements
 
-* PHP 5.3+ with [cURL support](http://php.net/manual/en/book.curl.php).
-
+- PHP 5.3+ with [cURL support](http://php.net/manual/en/book.curl.php).
 
 ## Usage and Quickstart Skeleton Project
 

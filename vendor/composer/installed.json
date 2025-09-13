@@ -1,281 +1,246 @@
 {
-    "packages": [
+  "packages": [
+    {
+      "name": "mf2/mf2",
+      "version": "v0.5.0",
+      "version_normalized": "0.5.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/microformats/php-mf2.git",
+        "reference": "ddc56de6be62ed4a21f569de9b80e17af678ca50"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/microformats/php-mf2/zipball/ddc56de6be62ed4a21f569de9b80e17af678ca50",
+        "reference": "ddc56de6be62ed4a21f569de9b80e17af678ca50",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.6.0"
+      },
+      "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "mf2/tests": "dev-master#e9e2b905821ba0a5b59dab1a8eaf40634ce9cd49",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3.6.2"
+      },
+      "suggest": {
+        "barnabywalters/mf-cleaner": "To more easily handle the canonical data php-mf2 gives you",
+        "masterminds/html5": "Alternative HTML parser for PHP, for better HTML5 support."
+      },
+      "time": "2022-02-10T01:05:27+00:00",
+      "bin": ["bin/fetch-mf2", "bin/parse-mf2"],
+      "type": "library",
+      "installation-source": "dist",
+      "autoload": {
+        "files": ["Mf2/Parser.php"]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": ["CC0-1.0"],
+      "authors": [
         {
-            "name": "mf2/mf2",
-            "version": "v0.5.0",
-            "version_normalized": "0.5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/microformats/php-mf2.git",
-                "reference": "ddc56de6be62ed4a21f569de9b80e17af678ca50"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/microformats/php-mf2/zipball/ddc56de6be62ed4a21f569de9b80e17af678ca50",
-                "reference": "ddc56de6be62ed4a21f569de9b80e17af678ca50",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "mf2/tests": "dev-master#e9e2b905821ba0a5b59dab1a8eaf40634ce9cd49",
-                "phpcompatibility/php-compatibility": "^9.3",
-                "phpunit/phpunit": "^5.7",
-                "squizlabs/php_codesniffer": "^3.6.2"
-            },
-            "suggest": {
-                "barnabywalters/mf-cleaner": "To more easily handle the canonical data php-mf2 gives you",
-                "masterminds/html5": "Alternative HTML parser for PHP, for better HTML5 support."
-            },
-            "time": "2022-02-10T01:05:27+00:00",
-            "bin": [
-                "bin/fetch-mf2",
-                "bin/parse-mf2"
-            ],
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "Mf2/Parser.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "CC0-1.0"
-            ],
-            "authors": [
-                {
-                    "name": "Barnaby Walters",
-                    "homepage": "http://waterpigs.co.uk"
-                }
-            ],
-            "description": "A pure, generic microformats2 parser — makes HTML as easy to consume as a JSON API",
-            "keywords": [
-                "html",
-                "microformats",
-                "microformats 2",
-                "parser",
-                "semantic"
-            ],
-            "support": {
-                "issues": "https://github.com/microformats/php-mf2/issues",
-                "source": "https://github.com/microformats/php-mf2/tree/v0.5.0"
-            },
-            "install-path": "../mf2/mf2"
-        },
-        {
-            "name": "nikic/php-parser",
-            "version": "v5.6.1",
-            "version_normalized": "5.6.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
-                "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-ctype": "*",
-                "ext-json": "*",
-                "ext-tokenizer": "*",
-                "php": ">=7.4"
-            },
-            "require-dev": {
-                "ircmaxell/php-yacc": "^0.0.7",
-                "phpunit/phpunit": "^9.0"
-            },
-            "time": "2025-08-13T20:13:15+00:00",
-            "bin": [
-                "bin/php-parse"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "PhpParser\\": "lib/PhpParser"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nikita Popov"
-                }
-            ],
-            "description": "A PHP parser written in PHP",
-            "keywords": [
-                "parser",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.1"
-            },
-            "install-path": "../nikic/php-parser"
-        },
-        {
-            "name": "phpish/http",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpish/http.git",
-                "reference": "bd6f604a2629687ebdcb637715d8ed571e6b3d1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpish/http/zipball/bd6f604a2629687ebdcb637715d8ed571e6b3d1a",
-                "reference": "bd6f604a2629687ebdcb637715d8ed571e6b3d1a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "time": "2014-11-23T23:33:44+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "http.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sandeep Shetty",
-                    "email": "sandeep.shetty@gmail.com",
-                    "homepage": "http://sandeep.shetty.in"
-                }
-            ],
-            "description": "Convenience wrapper around cURL",
-            "homepage": "https://github.com/phpish/http",
-            "keywords": [
-                "api",
-                "curl",
-                "http"
-            ],
-            "support": {
-                "issues": "https://github.com/phpish/http/issues",
-                "source": "https://github.com/phpish/http/tree/master"
-            },
-            "install-path": "../phpish/http"
-        },
-        {
-            "name": "phpish/link_header",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpish/link_header.git",
-                "reference": "c3f1aaa47511d4d774456f888081f16a53dd0133"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpish/link_header/zipball/c3f1aaa47511d4d774456f888081f16a53dd0133",
-                "reference": "c3f1aaa47511d4d774456f888081f16a53dd0133",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "time": "2013-08-25T18:04:46+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "link_header.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sandeep Shetty",
-                    "email": "sandeep.shetty@gmail.com",
-                    "homepage": "http://sandeep.shetty.in"
-                }
-            ],
-            "description": "Link header (RFC 5988) parser",
-            "homepage": "https://github.com/phpish/link_header",
-            "keywords": [
-                "http"
-            ],
-            "support": {
-                "issues": "https://github.com/phpish/link_header/issues",
-                "source": "https://github.com/phpish/link_header/tree/master"
-            },
-            "install-path": "../phpish/link_header"
-        },
-        {
-            "name": "phpish/webmention",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpish/webmention.git",
-                "reference": "b3328bc46a562c84b70a7f8d61b54b467ce3c345"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpish/webmention/zipball/b3328bc46a562c84b70a7f8d61b54b467ce3c345",
-                "reference": "b3328bc46a562c84b70a7f8d61b54b467ce3c345",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "phpish/http": "v1.0.0",
-                "phpish/link_header": "v1.0.0"
-            },
-            "time": "2020-11-09T21:46:51+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "files": [
-                    "webmention.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sandeep Shetty",
-                    "email": "sandeep.shetty@gmail.com",
-                    "homepage": "http://sandeep.shetty.in"
-                }
-            ],
-            "description": "Simple Webmention (http://webmention.org/) client in PHP",
-            "homepage": "https://github.com/phpish/webmention",
-            "keywords": [
-                "pingback",
-                "webmention"
-            ],
-            "support": {
-                "issues": "https://github.com/phpish/webmention/issues",
-                "source": "https://github.com/phpish/webmention/tree/v1.0.0"
-            },
-            "install-path": "../phpish/webmention"
+          "name": "Barnaby Walters",
+          "homepage": "http://waterpigs.co.uk"
         }
-    ],
-    "dev": true,
-    "dev-package-names": []
+      ],
+      "description": "A pure, generic microformats2 parser — makes HTML as easy to consume as a JSON API",
+      "keywords": [
+        "html",
+        "microformats",
+        "microformats 2",
+        "parser",
+        "semantic"
+      ],
+      "support": {
+        "issues": "https://github.com/microformats/php-mf2/issues",
+        "source": "https://github.com/microformats/php-mf2/tree/v0.5.0"
+      },
+      "install-path": "../mf2/mf2"
+    },
+    {
+      "name": "nikic/php-parser",
+      "version": "v5.6.1",
+      "version_normalized": "5.6.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/nikic/PHP-Parser.git",
+        "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
+        "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
+        "shasum": ""
+      },
+      "require": {
+        "ext-ctype": "*",
+        "ext-json": "*",
+        "ext-tokenizer": "*",
+        "php": ">=7.4"
+      },
+      "require-dev": {
+        "ircmaxell/php-yacc": "^0.0.7",
+        "phpunit/phpunit": "^9.0"
+      },
+      "time": "2025-08-13T20:13:15+00:00",
+      "bin": ["bin/php-parse"],
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "5.x-dev"
+        }
+      },
+      "installation-source": "dist",
+      "autoload": {
+        "psr-4": {
+          "PhpParser\\": "lib/PhpParser"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": ["BSD-3-Clause"],
+      "authors": [
+        {
+          "name": "Nikita Popov"
+        }
+      ],
+      "description": "A PHP parser written in PHP",
+      "keywords": ["parser", "php"],
+      "support": {
+        "issues": "https://github.com/nikic/PHP-Parser/issues",
+        "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.1"
+      },
+      "install-path": "../nikic/php-parser"
+    },
+    {
+      "name": "phpish/http",
+      "version": "v1.0.0",
+      "version_normalized": "1.0.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpish/http.git",
+        "reference": "bd6f604a2629687ebdcb637715d8ed571e6b3d1a"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpish/http/zipball/bd6f604a2629687ebdcb637715d8ed571e6b3d1a",
+        "reference": "bd6f604a2629687ebdcb637715d8ed571e6b3d1a",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.0"
+      },
+      "time": "2014-11-23T23:33:44+00:00",
+      "type": "library",
+      "installation-source": "dist",
+      "autoload": {
+        "files": ["http.php"]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": ["MIT"],
+      "authors": [
+        {
+          "name": "Sandeep Shetty",
+          "email": "sandeep.shetty@gmail.com",
+          "homepage": "http://sandeep.shetty.in"
+        }
+      ],
+      "description": "Convenience wrapper around cURL",
+      "homepage": "https://github.com/phpish/http",
+      "keywords": ["api", "curl", "http"],
+      "support": {
+        "issues": "https://github.com/phpish/http/issues",
+        "source": "https://github.com/phpish/http/tree/master"
+      },
+      "install-path": "../phpish/http"
+    },
+    {
+      "name": "phpish/link_header",
+      "version": "v1.0.0",
+      "version_normalized": "1.0.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpish/link_header.git",
+        "reference": "c3f1aaa47511d4d774456f888081f16a53dd0133"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpish/link_header/zipball/c3f1aaa47511d4d774456f888081f16a53dd0133",
+        "reference": "c3f1aaa47511d4d774456f888081f16a53dd0133",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.0"
+      },
+      "time": "2013-08-25T18:04:46+00:00",
+      "type": "library",
+      "installation-source": "dist",
+      "autoload": {
+        "files": ["link_header.php"]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": ["MIT"],
+      "authors": [
+        {
+          "name": "Sandeep Shetty",
+          "email": "sandeep.shetty@gmail.com",
+          "homepage": "http://sandeep.shetty.in"
+        }
+      ],
+      "description": "Link header (RFC 5988) parser",
+      "homepage": "https://github.com/phpish/link_header",
+      "keywords": ["http"],
+      "support": {
+        "issues": "https://github.com/phpish/link_header/issues",
+        "source": "https://github.com/phpish/link_header/tree/master"
+      },
+      "install-path": "../phpish/link_header"
+    },
+    {
+      "name": "phpish/webmention",
+      "version": "v1.0.0",
+      "version_normalized": "1.0.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpish/webmention.git",
+        "reference": "b3328bc46a562c84b70a7f8d61b54b467ce3c345"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpish/webmention/zipball/b3328bc46a562c84b70a7f8d61b54b467ce3c345",
+        "reference": "b3328bc46a562c84b70a7f8d61b54b467ce3c345",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.0",
+        "phpish/http": "v1.0.0",
+        "phpish/link_header": "v1.0.0"
+      },
+      "time": "2020-11-09T21:46:51+00:00",
+      "type": "library",
+      "installation-source": "dist",
+      "autoload": {
+        "files": ["webmention.php"]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": ["MIT"],
+      "authors": [
+        {
+          "name": "Sandeep Shetty",
+          "email": "sandeep.shetty@gmail.com",
+          "homepage": "http://sandeep.shetty.in"
+        }
+      ],
+      "description": "Simple Webmention (http://webmention.org/) client in PHP",
+      "homepage": "https://github.com/phpish/webmention",
+      "keywords": ["pingback", "webmention"],
+      "support": {
+        "issues": "https://github.com/phpish/webmention/issues",
+        "source": "https://github.com/phpish/webmention/tree/v1.0.0"
+      },
+      "install-path": "../phpish/webmention"
+    }
+  ],
+  "dev": true,
+  "dev-package-names": []
 }
