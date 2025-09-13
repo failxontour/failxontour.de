@@ -1,9 +1,10 @@
 ---
 name: Pull request
 about: When making a pull request for the project
-title: ""
-labels: ""
-assignees: ""
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 **Is your pull request related to a problem? Please describe.**
