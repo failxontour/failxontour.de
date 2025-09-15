@@ -7820,7 +7820,6 @@ RewriteRule ^(.*)$ – [F,L]
 	</RequireAll>
 </IfModule>
 
-[server]
 # Steam Community
-rewrite ^(/steamcommunity-gangbeasts-kernel-bug)(.*) https://steamcommunity.com/app/285900/discussions/0/608668448981068545/ redirect;
-rewrite ^(/steamcommunity-gris-bug)(.*) https://steamcommunity.com/app/683320/discussions/0/592902205937338756#c592902205937369903 redirect;
+RedirectTemp /steamcommunity-gangbeasts-kernel-bug https://steamcommunity.com/app/285900/discussions/0/608668448981068545
+RedirectTemp /steamcommunity-gris-bug https://steamcommunity.com/app/683320/discussions/0/592902205937338756#c592902205937369903
