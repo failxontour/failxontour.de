@@ -9,6 +9,8 @@ hey this is my public git repository for my personal frontend blog | videos | mu
 
 I host my website on [ALL-INKL.COM - Neue Medien Münnich](https://all-inkl.com/en/legal-notice/) on a Ubuntu server currently with a LA(M)P stack. The M is missing as I have no active MySQL (MariaDB) base.
 
+Some of my code is authored, audited and validated by AI such as Lumo, Microsoft Copilot
+
 If you have any questions or feel concered
 about your privacy on my website contact me here
 privacy(at)failxontour.de
@@ -19,6 +21,8 @@ Originally using the MIT License
 
 Dependencies
 
+- [Prettier formatter](https://github.com/prettier/prettier)
+- [Parcel](https://github.com/parcel-bundler/parcel)
 - [Hashover](https://github.com/jacobwb/hashover/)
 - [Databuddy Analytics JS](https://github.com/databuddy-analytics/Databuddy)
 - [Apache Block Bad Bots](https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker)
