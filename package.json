@@ -5,5 +5,8 @@
     "buffer": "^6.0.3",
     "parcel": "^2.15.4",
     "prettier": "3.6.2"
+  },
+  "dependencies": {
+    "uglify-js": "^3.19.3"
   }
 }
