@@ -27,7 +27,7 @@ Dependencies
 - [Databuddy Analytics JS](https://github.com/databuddy-analytics/Databuddy)
 - [Apache Block Bad Bots](https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker)
 - [Composer](https://github.com/composer/composer)
-- [Modernizr](https://modernizr.com/)
+- [Modernizr](https://github.com/modernizr/modernizr)
 - [php-mf2 | microformats2-parser](https://github.com/microformats/php-mf2)
 - [webmention](https://github.com/phpish/webmention)
 
