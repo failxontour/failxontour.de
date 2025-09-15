@@ -7820,6 +7820,23 @@ RewriteRule ^(.*)$ – [F,L]
 	</RequireAll>
 </IfModule>
 
-# Steam Community
+# Adding Caching 
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/png      "access plus 1 year"
+    ExpiresByType image/jpeg     "access plus 1 year"
+    ExpiresByType text/css       "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|png|jpe?g|svg|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+
+# Steam Community redirects
 RedirectTemp /steamcommunity-gangbeasts-kernel-bug https://steamcommunity.com/app/285900/discussions/0/608668448981068545
 RedirectTemp /steamcommunity-gris-bug https://steamcommunity.com/app/683320/discussions/0/592902205937338756#c592902205937369903

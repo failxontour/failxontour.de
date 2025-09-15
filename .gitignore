@@ -2,3 +2,4 @@
 *.log
 videos/*.mkv
 videos/*.mp4
+.parcel-cache
