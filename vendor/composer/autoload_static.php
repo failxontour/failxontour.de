@@ -18,12 +18,20 @@ class ComposerStaticInit9622dd827becd4430ae91af9e0a4face
         array (
             'PhpParser\\' => 10,
         ),
+        'M' => 
+        array (
+            'Masterminds\\' => 12,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
     );
 

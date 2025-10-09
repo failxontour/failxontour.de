@@ -1,3 +1,23 @@
+<?php
+
+namespace YourApp;
+
+require '/vendor/autoload.php';
+
+use Mf2;
+
+// (Above code (or equivalent) assumed in future examples)
+
+$mf = Mf2\fetch('http://microformats.org');
+
+// $mf is either a canonical mf2 array, or null on an error.
+if (is_array($mf)) {
+  foreach ($mf['items'] as $microformat) {
+    // Note: in real code, never assume that a property exists, or that a particular property value is a string!
+    echo "A {$microformat['type'][0]} called {$microformat['properties']['name'][0]}\n";
+  }
+}
+?>
 <!-- Thanks for viewing the source code. I don't minify for readability. © 2025 - FailXontour -->
 <!doctype html>
 <html class="theme-auto" lang="en">
@@ -40,8 +60,9 @@
             class="u-photo avatar"
             src="images/pirating-is-good-practice-circle.svg"
             alt="Pirating is good practice"
+            loading="lazy"
           />
-          <a href="https://failxontour.de/" class="h-card" rel="me"
+          <a class="h-card" href="https://failxontour.de/" rel="me"
             ><h1>FailXontour</h1></a
           >
           <p>
@@ -68,7 +89,7 @@
           </p>
           <p>Socials</p>
         </div>
-        <nav aria-label="Socials" class="button-stack">
+        <nav class="button-stack" aria-label="Socials">
           <!-- <button class="button button-bluesky" name="Bluesky" command="toggle-popover" commandfor="bluesky"  type="button"><img class="icon" aria-hidden="true" src="images/icons/bluesky.svg" alt="Bluesky Logo">Bluesky</button><button type="button" id="bluesky" popover command="hide-popover" commandfor="bluesky" onclick="window.open('https://bsky.app/profile/failxontour.bsky.social','_blank');">open external link to bsky.app/profile/failxontour.bsky.social</button> -->
           <button
             class="button button-mastodon"
@@ -79,13 +100,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/mastodon.svg"
               alt="Mastodon Logo"
+              aria-hidden="true"
+              loading="lazy"
             />Mastodon</button
           ><button
-            type="button"
             id="mastodon"
+            type="button"
             popover
             command="hide-popover"
             commandfor="mastodon"
@@ -108,13 +130,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/matrix.svg"
               alt="Matrix Logo"
+              aria-hidden="true"
+              loading="lazy"
             />Matrix</button
           ><button
-            type="button"
             id="matrix"
+            type="button"
             popover
             command="hide-popover"
             commandfor="matrix"
@@ -132,13 +155,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/steam.svg"
               alt="Steam Logo"
+              aria-hidden="true"
+              loading="lazy"
             />Steam</button
           ><button
-            type="button"
             id="steam"
+            type="button"
             popover
             command="hide-popover"
             commandfor="steam"
@@ -154,14 +178,15 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-email.svg"
               alt="Email Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Send me a friendly email
           </button>
         </nav>
         <p>Me</p>
-        <nav aria-label="Me" class="button-stack">
+        <nav class="button-stack" aria-label="Me">
           <button
             class="button button-default"
             name="Blog"
@@ -170,9 +195,10 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/blog-solid.svg"
               alt="Blog Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Blog
           </button>
           <button
@@ -183,9 +209,10 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/video-solid.svg"
               alt="Video Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Videos
           </button>
           <button
@@ -196,9 +223,10 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/book-solid.svg"
               alt="Book Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Guestbook
           </button>
           <button
@@ -209,9 +237,10 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/music-solid.svg"
               alt="Music Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Music
           </button>
           <button
@@ -222,9 +251,10 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/note-sticky-solid.svg"
               alt="Note Sticky Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Stickers
           </button>
           <button
@@ -235,9 +265,10 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/user-tie-solid.svg"
               alt="User Tie Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Portfolio | Piwigo
           </button>
           <button
@@ -248,10 +279,11 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               style="width: 80px; height: 20px"
               src="images/logo2.gif"
               alt="JAUP"
+              aria-hidden="true"
+              loading="lazy"
             />JAUP
           </button>
           <button
@@ -263,13 +295,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/pronouns.svg"
               alt="Pronouns Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Pronouns</button
           ><button
-            type="button"
             id="pronouns"
+            type="button"
             popover
             command="hide-popover"
             commandfor="pronouns"
@@ -285,14 +318,15 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/paw-solid.svg"
               alt="Paw Solid Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Dog
           </button>
         </nav>
         <p>Local</p>
-        <nav aria-label="Local" class="button-stack">
+        <nav class="button-stack" aria-label="Local">
           <button
             class="button button-rock"
             name="Rockini"
@@ -302,13 +336,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/headphones-simple-solid.svg"
               alt="Rockini icon"
+              aria-hidden="true"
+              loading="lazy"
             />Rockini</button
           ><button
-            type="button"
             id="rockini"
+            type="button"
             popover
             command="hide-popover"
             commandfor="rockini"
@@ -325,13 +360,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/hand-back-fist-solid.svg"
               alt="Burnout Festival icon"
+              aria-hidden="true"
+              loading="lazy"
             />Burnout Festival</button
           ><button
-            type="button"
             id="burnout"
+            type="button"
             popover
             command="hide-popover"
             commandfor="burnout"
@@ -348,13 +384,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/weserbeatz.jpg"
               alt="Weserbeatz icon"
+              aria-hidden="true"
+              loading="lazy"
             />Weserbeatz</button
           ><button
-            type="button"
             id="weserbeatz"
+            type="button"
             popover
             command="hide-popover"
             commandfor="weserbeatz"
@@ -371,13 +408,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/freibad.png"
               alt="Freibad am Dobben icon"
+              aria-hidden="true"
+              loading="lazy"
             />Freibad am Dobben</button
           ><button
-            type="button"
             id="freibad-am-dobben"
+            type="button"
             popover
             command="hide-popover"
             commandfor="freibad-am-dobben"
@@ -394,13 +432,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/sprotte.jpg"
               alt="Das Sprotte icon"
+              aria-hidden="true"
+              loading="lazy"
             />Das Sprotte</button
           ><button
-            type="button"
             id="das-sprotte"
+            type="button"
             popover
             command="hide-popover"
             commandfor="das-sprotte"
@@ -418,13 +457,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/socialcarcrew.png"
               alt="Social Car Crew icon"
+              aria-hidden="true"
+              loading="lazy"
             />Social Car Crew</button
           ><button
-            type="button"
             id="social-car-crew"
+            type="button"
             popover
             command="hide-popover"
             commandfor="social-car-crew"
@@ -441,13 +481,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/bmw.png"
               alt="BMW Crew Nienburg icon"
+              aria-hidden="true"
+              loading="lazy"
             />BMW Crew Nienburg</button
           ><button
-            type="button"
             id="bmw-crew"
+            type="button"
             popover
             command="hide-popover"
             commandfor="bmw-crew"
@@ -464,13 +505,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/rallysulingen.png"
               alt="Rally Sulingen icon"
+              aria-hidden="true"
+              loading="lazy"
             />Rally Sulingen</button
           ><button
-            type="button"
             id="rally-sulingen"
+            type="button"
             popover
             command="hide-popover"
             commandfor="rally-sulingen"
@@ -487,13 +529,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/dielinke.svg"
               alt="Die Linke icon"
+              aria-hidden="true"
+              loading="lazy"
             />Die Linke</button
           ><button
-            type="button"
             id="die-linke"
+            type="button"
             popover
             command="hide-popover"
             commandfor="die-linke"
@@ -503,7 +546,7 @@
           </button>
         </nav>
         <p>🤔 you got 🪙 to spare? Donate here</p>
-        <nav aria-label="Donate" class="button-stack">
+        <nav class="button-stack" aria-label="Donate">
           <button
             class="button button-default"
             name="SOS Balkanroute"
@@ -513,13 +556,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />SOS Balkanroute</button
           ><button
-            type="button"
             id="sos"
+            type="button"
             popover
             command="hide-popover"
             commandfor="sos"
@@ -536,13 +580,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />DLRG</button
           ><button
-            type="button"
             id="dlrg"
+            type="button"
             popover
             command="hide-popover"
             commandfor="dlrg"
@@ -559,13 +604,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />UNO Flüchtlingshilfe</button
           ><button
-            type="button"
             id="uno"
+            type="button"
             popover
             command="hide-popover"
             commandfor="uno"
@@ -582,13 +628,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Johanniter</button
           ><button
-            type="button"
             id="johanniter"
+            type="button"
             popover
             command="hide-popover"
             commandfor="johanniter"
@@ -605,13 +652,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Seenotretter</button
           ><button
-            type="button"
             id="seenotretter"
+            type="button"
             popover
             command="hide-popover"
             commandfor="seenotretter"
@@ -628,13 +676,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />DRK</button
           ><button
-            type="button"
             id="drk"
+            type="button"
             popover
             command="hide-popover"
             commandfor="drk"
@@ -651,13 +700,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Hanseatic</button
           ><button
-            type="button"
             id="hanseatic"
+            type="button"
             popover
             command="hide-popover"
             commandfor="hanseatic"
@@ -674,13 +724,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />DGFE</button
           ><button
-            type="button"
             id="dgfe"
+            type="button"
             popover
             command="hide-popover"
             commandfor="dgfe"
@@ -697,13 +748,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Löwenherz</button
           ><button
-            type="button"
             id="loewenherz"
+            type="button"
             popover
             command="hide-popover"
             commandfor="loewenherz"
@@ -720,13 +772,14 @@
           >
             <img
               class="icon"
-              aria-hidden="true"
               src="images/icons/generic-website.svg"
               alt="Website Icon"
+              aria-hidden="true"
+              loading="lazy"
             />Welthungerhilfe</button
           ><button
-            type="button"
             id="welthunger"
+            type="button"
             popover
             command="hide-popover"
             commandfor="welthunger"
@@ -758,67 +811,67 @@
             >
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/noweb32.gif"
                 alt="Say no to web3"
+                width="88"
+                loading="lazy"
               />
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/roly-saynotoweb3.gif"
                 alt="Say no to web3"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://lu.tiny-universes.net/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/b-parentaladvisory5.png"
                 alt="Parental Advisory - The internet is a shitty babysiter"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://hamptonroadspride.org/flags">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/lgbtqia+support.gif"
                 alt="LGBTQIA+ Support or die, we got progress to do!"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://blagi.neocities.org/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/bestviewed.gif"
                 alt="Best viewed with a computer"
+                width="88"
+                loading="lazy"
               />
             </a>
             <br />
             <iframe
-              width="88"
               height="31"
               src="//incr.easrng.net/badge?key=changeme"
               style="background: url(images/bg.gif)"
               title="increment badge"
+              width="88"
             ></iframe>
             <a href="https://www.linuxmint.com/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/gnu-linux.gif"
                 alt="This website was made with GNU/Linux"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a
@@ -826,11 +879,11 @@
             >
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/discord-no-way.gif"
                 alt="F#+? off Discord"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a
@@ -838,41 +891,41 @@
             >
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/fckfb.gif"
                 alt="F#+? off Facebook"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://fuckoffgoogle.de/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/google_stand.gif"
                 alt="F#+? off Google"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://www.amazon.de/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/sucks.gif"
                 alt="dont click it"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://jointhefediverse.net/learn/?lang=en-us">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/neo-fedi.gif"
                 alt="Join the fediverse now"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a
@@ -880,64 +933,64 @@
             >
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/shitify.gif"
                 alt="when you love music but hate artists"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://afd-verbot.jetzt/en">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/antinazi.gif"
                 alt="how many nazis do you need to turn in a light bulb, nein"
+                width="88"
+                loading="lazy"
               />
             </a>
             <br />
             <a href="https://wiki.selfhtml.org/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/got_html.gif"
                 alt="got html?"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://www.w3.org/developers/tools/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 src="images/I_heart_validator_lg.png"
                 alt="I heart validator"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="http://validator.w3.org/">
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 style="border: 0"
                 src="images/valid-html5.gif"
                 alt="[Valid HTML]"
                 title="Validate my HTML"
+                width="88"
+                loading="lazy"
               />
             </a>
             <a href="https://jigsaw.w3.org/css-validator/check/referer">
               <img
                 class="gif"
-                loading="lazy"
                 style="border: 0; width: 88px; height: 31px"
                 src="images/vcss-blue.png"
                 alt="[Valid CSS!]"
                 title="Validate my CSS"
+                loading="lazy"
               />
             </a>
             <a
@@ -945,13 +998,13 @@
             >
               <img
                 class="gif"
-                loading="lazy"
-                width="88"
                 height="31"
                 style="border: 0"
                 src="images/valid-rss-rogers.png"
                 alt="[Valid RSS]"
                 title="Validate my RSS feed"
+                width="88"
+                loading="lazy"
               />
             </a>
             <br />
@@ -960,42 +1013,43 @@
             >
               <img
                 class="gif"
-                loading="lazy"
-                width="167"
                 height="61"
                 src="images/created-by-a-human-with-a-heart-3x.png"
                 alt="This site was made by a human and this is the badge to show it"
+                width="167"
+                loading="lazy"
               />
             </a>
             <a href="https://www.htmlhobbyist.com/?webring=htmlhobbyist">
               <img
                 class="gif"
-                loading="lazy"
-                width="103"
                 height="59"
                 src="images/stamp-yrownwebsite.png"
                 alt="Maybe you should make a website?"
+                width="103"
+                loading="lazy"
               />
             </a>
             <a href="https://www.htmlhobbyist.com/">
               <img
                 class="gif"
-                loading="lazy"
-                width="68"
                 height="61"
                 src="images/html-hobbyist-badge.svg"
                 alt="I am an HTML Hobbyist"
                 style="border: none"
+                width="68"
+                loading="lazy"
               />
             </a>
           </div>
           <a href="https://github.com/failxontour/failxontour.de"
             >failxontour.de</a
           >
+          |
+          <a href="https://codeberg.org/failxontour/failxontour.de">Codeberg</a>
           © 2025 by <a href="https://failxontour.de">failxontour</a> is
           licensed under <a href="/cc-by-nc-sa-4.0.LICENSE">CC BY-NC-SA 4.0</a
           ><img
-            width="16"
             height="16"
             src="svgs/cc/cc.svg"
             alt=""
@@ -1005,8 +1059,9 @@
               margin-left: 0.2em;
               display: inline-block;
             "
-          /><img
             width="16"
+            loading="lazy"
+          /><img
             height="16"
             src="svgs/cc/by.svg"
             alt=""
@@ -1016,8 +1071,9 @@
               margin-left: 0.2em;
               display: inline-block;
             "
-          /><img
             width="16"
+            loading="lazy"
+          /><img
             height="16"
             src="svgs/cc/nc.svg"
             alt=""
@@ -1027,8 +1083,9 @@
               margin-left: 0.2em;
               display: inline-block;
             "
-          /><img
             width="16"
+            loading="lazy"
+          /><img
             height="16"
             src="svgs/cc/sa.svg"
             alt=""
@@ -1038,6 +1095,8 @@
               margin-left: 0.2em;
               display: inline-block;
             "
+            width="16"
+            loading="lazy"
           />
           <p>last time updated</p>
           <p id="lastupdated"></p>
@@ -1045,11 +1104,12 @@
           <span>🍽️ now serving</span>
           <a href="https://www.digits.net" target="_blank"
             ><img
-              width="150"
               height="20"
               style="margin: auto"
               src="https://counter.digits.net/?counter={bc0f90d3-04a4-0eb4-8130-f967bf5c9194}&template=simple&digits=10&rightface&zerofill&charset=9"
               alt="Hit Counter by Digits"
+              width="150"
+              loading="lazy"
           /></a>
         </footer>
       </div>
@@ -1071,6 +1131,7 @@
         "
         src="/images/shego.gif"
         title="mmh yes look my mooscles getting bigger (Vargskelethor Joel | Hard Time reference)"
+        loading="lazy"
       />
     </a>
     <script>

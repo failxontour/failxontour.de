@@ -3,8 +3,9 @@
     "@parcel/packager-raw-url": "^2.15.4",
     "@parcel/transformer-webmanifest": "^2.15.4",
     "buffer": "^6.0.3",
-    "parcel": "^2.15.4",
-    "prettier": "3.6.2"
+    "parcel": "^2.16.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-attributes": "^1.0.0"
   },
   "dependencies": {
     "uglify-js": "^3.19.3"
