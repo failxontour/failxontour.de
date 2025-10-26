@@ -3,3 +3,4 @@
 videos/*.mkv
 videos/*.mp4
 .parcel-cache
+vendor/masterminds/html5

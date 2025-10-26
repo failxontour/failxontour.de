@@ -61,7 +61,7 @@
         outline: 2px solid revert
     }
     .gravatar-hovercard .gravatar-hovercard__inner {
-        border-radius: 4px;
+        border-radius: 1em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -69,7 +69,7 @@
         overflow: hidden;
         padding: 24px 24px 16px;
         position: relative;
-        width: 37.5rem
+        width: 100%
     }
     .gravatar-hovercard .gravatar-hovercard__header-image {
         height: 75px;
