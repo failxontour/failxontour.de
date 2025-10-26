@@ -31,12 +31,16 @@ button:hover {
   filter: var(--icon-filter, none);
 }
 
+.icon-black{
+    filter: var(--icon-filter, brightness(0%));
+}
+
 /* Brand-Specific Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Default */
 .button.button-default {
-  --button-text: #ffffff;
+  --button-text: #000000;
   --button-background: #2dbf0f;
   --button-border: 1px solid #ffffff;
 }
@@ -54,9 +58,9 @@ button:hover {
 }
 /* Matrix */
 .button-matrix {
-  --button-text: #000000;
-  --button-background: #ffffff;
-  --button-border: 1px solid #000000;
+  --button-text: #ffffff;
+  --button-background: #2e3440;
+  --button-border: 1px solid #ffffff;
 }
 /* Steam Alt */
 .button-steam-alt {
@@ -66,9 +70,9 @@ button:hover {
 }
 /* Weserbeatz, Das Sprotte */
 .button-weserbeatz {
-  --button-text: #000000;
-  --button-background: #ffffff;
-  --button-border: 1px solid #000000;
+  --button-text: #ffffff;
+  --button-background: #2e3440;
+  --button-border: 1px solid #ffffff;
 }
 /* Tierschutzverein */
 .button-tierschutzverein {
@@ -79,18 +83,18 @@ button:hover {
 /* Rockini, Burnout, Social Car Crew, BMW Crew Nienburg, Die Linke */
 .button-rock {
   --button-text: #ffffff;
-  --button-background: #000000;
+  --button-background: #2e3440;
   --button-border: 1px solid #ffffff;
 }
 /* Freibad am Dobben */
 .button-freibad-am-dobben {
   --button-text: #ffffff;
-  --button-background: #1e59a6;
+  --button-background: #2e3440;
   --button-border: 1px solid #ffffff;
 }
 /* Rally Sulingen */
 .button-rally-sulingen {
   --button-text: #ffffff;
-  --button-background: #430077;
+  --button-background: #2e3440;
   --button-border: 1px solid #ffffff;
 }

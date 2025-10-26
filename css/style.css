@@ -44,10 +44,10 @@
   margin-bottom: 1rem; /* 16px space between paragraphs */
 }
 .column {
-  position: center;
-  width: 100%;
-  float: center;
-  box-sizing: border-box;
+  /* position: center; */
+  width: 100%; 
+  /*float: center; */
+  box-sizing: border-box; 
 }
 /* For devices larger than 400px */
 @media (min-width: 25rem) {
@@ -253,6 +253,10 @@ button {
   flex-shrink: 0;
 }
 
+.matrix-icon {
+  background: white;
+}
+
 /* Videos
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -316,7 +320,7 @@ article {
 }
 @media (prefers-color-scheme: dark) {
   :root.theme-auto body {
-    background-color: #121212;
+    background-color: #0c0e11;
     color: #ffffff;
   }
   :root.theme-auto :focus-visible {
