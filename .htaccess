@@ -1,17 +1,3 @@
-RewriteEngine on
-
-
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
-
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
-
-# Remove .php-extension from url
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^([^\.]+)/$ $1.php 
-
 ## Apache Spam Referer Blocker .htaccess version for mod_rewrite.c
 ##################################################################
 ## Rename this file to .htaccess
@@ -19,9 +5,9 @@ RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 # https://github.com/mitchellkrogza/apache-ultimate-bad-bot-blocker
 
 ### Version Information #
-### Version: V3.2025.05.2262
-### Bad Referrer Count: 7104
-### Bad Bot Count: 666
+### Version: V3.2025.10.2419
+### Bad Referrer Count: 7105
+### Bad Bot Count: 681
 ### Version Information ##
 
 <IfModule mod_rewrite.c>
@@ -43,9 +29,12 @@ RewriteCond %{HTTP_USER_AGENT} \bAcunetix\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAdsTxtCrawlerTP\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAfD\-Verbotsverfahren\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAhrefsBot\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bAi2Bot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAiHitBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAipbot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAlexibot\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bAliyun\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bAliyunSecBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAllSubmitter\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAlligator\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bAlphaBot\b [NC,OR]
@@ -196,6 +185,7 @@ RewriteCond %{HTTP_USER_AGENT} \bGPTBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bGT\:\:WWW\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bG\-i\-g\-a\-b\-o\-t\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bGalaxyBot\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bGeedoProductSearch\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bGenieo\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bGermCrawler\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bGetRight\b [NC,OR]
@@ -450,13 +440,20 @@ RewriteCond %{HTTP_USER_AGENT} \bSeekportBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSemanticJuice\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSemrush\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSemrushBot\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSemrushBot\-BA\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSemrushBot\-FT\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSemrushBot\-OCOB\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSemrushBot\-SI\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSemrushBot\-SWA\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSentiBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSenutoBot\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSeoCherryBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSeoSiteCheckup\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSeobilityBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSeomoz\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bShodan\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSiphon\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSiteAuditBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSiteCheckerBotCrawler\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSiteExplorer\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSiteLockSpider\b [NC,OR]
@@ -484,6 +481,7 @@ RewriteCond %{HTTP_USER_AGENT} \bSpbot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSpider\_Bot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSpider\_Bot\/3\.0\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSpinn3r\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bSplitSignalBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSputnikBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSqlmap\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bSqlworm\b [NC,OR]
@@ -612,6 +610,7 @@ RewriteCond %{HTTP_USER_AGENT} \bZoominfoBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bZumBot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bZyBorg\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \badscanner\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \ballenai\.org\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \banthropic\-ai\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \barchive\.org\_bot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \barquivo\-web\-crawler\b [NC,OR]
@@ -631,10 +630,12 @@ RewriteCond %{HTTP_USER_AGENT} \bcrawler4j\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bcrawler\.feedback\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bdataforseo\.com\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bdataforseobot\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \bdataprovider\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bdemandbase\-bot\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bdomainsproject\.org\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \beCatch\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bevc\-batch\b [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} \beveryfeed\-spider\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bfacebookscraper\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bgopher\b [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} \bheritrix\b [NC,OR]
@@ -849,6 +850,7 @@ RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*991mostfm\.co\.id.*$ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*999webdesign\.com.*$ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*9icmzvn6\.website.*$ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*9med\.net.*$ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*Dataprovider\.com.*$ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*DomainStatsBot.*$ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*a\.frcls\.fr.*$ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*a\.pr\-cy\.ru.*$ [NC,OR]
