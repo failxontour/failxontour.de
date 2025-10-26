@@ -21,6 +21,9 @@
     <link rel="alternate" type="application/rss+xml" title="FailXontour RSS Feed" href="rss.xml">
     <link rel="alternate" type="application/atom+xml" title="FailXontour Atom Feed" href="atom.xml">
     <style>
+    .gravatar-box{
+        display:inline-block;
+    }
     .gravatar-hovercard {
         display: inline-block;
         line-height: 1.5;
@@ -387,7 +390,7 @@
 <body>
 
 <div class="container-justify">
-  <article>
+  <article class="gravatar-box">
   <div class="gravatar-hovercard">
 			<div class="gravatar-hovercard__inner">
 				<div class="gravatar-hovercard__header-image" style="background: url(&quot;https://0.gravatar.com/userimage/222401715/a8acdecfdcc16021cd3fc709c5d0cc4f?size=1024&quot;) 50% 50% / 100% no-repeat; width: 560px; left: 279px;"></div>
