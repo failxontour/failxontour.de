@@ -1,0 +1,964 @@
+<?php
+
+namespace failxontour;
+
+require '/vendor/autoload.php';
+
+use Mf2;
+
+// (Above code (or equivalent) assumed in future examples)
+
+$mf = Mf2\fetch('http://microformats.org');
+
+// $mf is either a canonical mf2 array, or null on an error.
+if (is_array($mf)) {
+  foreach ($mf['items'] as $microformat) {
+    // Note: in real code, never assume that a property exists, or that a particular property value is a string!
+    echo "A {$microformat['type'][0]} called {$microformat['properties']['name'][0]}\n";
+  }
+}
+?>
+<!-- Thanks for viewing the source code. I don't minify for readability. © 2025 - FailXontour -->
+<!doctype html>
+<html class="theme-auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FailXontour</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="failxontour" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <meta
+      name="description"
+      content="find all my hot links to socials, blog'n' stuff here"
+    />
+    <meta name="keywords" content="failxontour, failx" />
+    <link rel="canonical" href="https://failxontour.de" />
+    <meta name="author" content="failxontour" />
+    <meta name="fediverse:creator" content="@failxontour@mastodon.social" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/brands.css" />
+  </head>
+  <body onload="getCookies()">
+    <div class="container">
+      <div class="column">
+        <div class="h-card">
+          <img
+            class="u-photo avatar"
+            src="images/pirating-is-good-practice-circle.svg"
+            alt="Pirating is good practice"
+            loading="lazy"
+          />
+          <a class="h-card" href="https://failxontour.de/" rel="me"
+            ><h1>FailXontour</h1></a
+          >
+          <p>
+            Welcome to my personal website were I share updates, blog and got
+            buttons to my profiles. Stuff of interest
+          </p>
+          <h2>what to expect to find here?</h2>
+          <b
+            >Online privacy advocate, tech-endorser, early adopter, PEBKAC,
+            Linux user, mediadesigner, gaming,<br />mental health (journaling),
+            [web-dev] maybe?</b
+          ><br /><br />
+          <h3>
+            My name is Felix I am 26 [cis/m] and associate myself as Bi-curious
+          </h3>
+          <p class="p-note">
+            I like cats, guinea pigs my gf, family charity, music, binge
+            watching, cars I do care for human rights, global goals in the
+            interest of everyone not just myself. Even if I sound narcassitic.
+          </p>
+          <p>
+            I like stuff that tingles' my spidey senses. That's why I am on the
+            🕸️ regain your own personal space
+          </p>
+          <h4>Caution</h4>
+          <p>Please be aware of the links, gifs marked or emoji
+            <br>⚠️ they're leading to external websites <br>📊 Big Data platforms<br>⛔ are unsafe as they use no SSL
+          </p>
+          <p>Socials</p>
+        </div>
+        <nav class="button-stack" aria-label="Socials">
+            <a
+            class="button button-mastodon"
+            href="https://mastodon.social/@failxontour"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+            title="Open Mastodon Profile ⚠️ External Link 📊 Big Data"
+            ><img
+              class="icon"
+              src="images/icons/mastodon.svg"
+              alt="Mastodon Logo"
+              aria-hidden="true"
+              loading="lazy"
+            />Mastodon ⚠️</a>
+          <a
+    class="button button-matrix"
+    href="https://matrix.to/#/#nebulon:matrix.org"
+    target="_blank"
+    rel="noopener noreferrer"
+    role="button"
+    title="Open private chat server  ⚠️ External Link"
+>
+    <img
+        class="icon"
+        src="images/icons/matrix.svg"
+        alt="Matrix Logo"
+        aria-hidden="true"
+        loading="lazy"
+    />Matrix ⚠️
+</a>
+<a
+    class="button button-steam-alt"
+    href="https://steamcommunity.com/id/failxontour/"
+    target="_blank"
+    rel="noopener noreferrer"
+    role="button"
+    title="Open Steam Profile ⚠️ External Link 📊 Big Data"
+>
+    <img
+        class="icon"
+        src="images/icons/steam.svg"
+        alt="Steam Logo"
+        aria-hidden="true"
+        loading="lazy"
+    />Steam ⚠️
+</a>
+
+<a
+    class="button button-default"
+    href="mailto:friends@failxontour.de"
+    role="button"
+    title="Send me a friendly email"
+>
+    <img
+        class="icon"
+        src="images/icons/generic-email.svg"
+        alt="Email Icon"
+        aria-hidden="true"
+        loading="lazy"
+    />Send me a friendly email
+</a>
+        </nav>
+<p>Me</p>
+        <nav class="button-stack" aria-label="Me">
+          <a
+        class="button button-default"
+        href="blog/index.php"
+        role="button"
+        title="Visit my Blog"
+    >
+        <img
+            class="icon"
+            src="images/icons/blog-solid.svg"
+            alt="Blog Solid Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Blog
+    </a>
+    <a
+        class="button button-default"
+        href="videos/index.html"
+        role="button"
+        title="Watch my Videos"
+        rel="noopener noreferrer"
+    >
+        <img
+            class="icon"
+            src="images/icons/video-solid.svg"
+            alt="Video Solid Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Videos
+    </a>
+    <a
+        class="button button-default"
+        href="guestbook.html"
+        role="button"
+        title="Visit Guestbook"
+    >
+        <img
+            class="icon"
+            src="images/icons/book-solid.svg"
+            alt="Book Solid Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Guestbook
+    </a>
+    <a
+        class="button button-default"
+        href="venexim.html"
+        role="button"
+        title="Listen to my Music"
+    >
+        <img
+            class="icon"
+            src="images/icons/music-solid.svg"
+            alt="Music Solid Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Music
+    </a>
+    <a
+        class="button button-default"
+        href="https://share.failxontour.de"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Stickers"
+    >
+        <img
+            class="icon"
+            src="images/icons/note-sticky-solid.svg"
+            alt="Note Sticky Solid Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Stickers
+    </a>
+    <a
+        class="button button-default"
+        href="https://felix.bauerschaefer.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit my Portfolio"
+    >
+        <img
+            class="icon"
+            src="images/icons/user-tie-solid.svg"
+            alt="User Tie Solid Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Portfolio | Piwigo
+    </a>
+    <a
+        class="button button-default"
+        href="https://thesa-fest.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit JAUP"
+    >
+        <img
+            class="icon"
+            style="width: 80px; height: 20px"
+            src="images/logo2.gif"
+            alt="JAUP"
+            aria-hidden="true"
+            loading="lazy"
+        />JAUP
+    </a>
+    <a
+        class="button button-default"
+        href="https://pronomen.net/@failxontour"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="See my Pronouns ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/pronouns.svg"
+            alt="Pronouns Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Pronouns
+    </a>
+    <a
+    class="button button-default"
+    href="https://guenther.bauerschaefer.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    role="button"
+    title="Visit Günther's page"
+>
+    <img
+        class="icon"
+        src="images/icons/paw-solid.svg"
+        alt="Paw Solid Icon"
+        aria-hidden="true"
+        loading="lazy"
+    />Dog
+</a>
+</nav>
+        <p>Local</p>
+<nav class="button-stack" aria-label="Local">
+    <a
+        class="button button-rock"
+        href="https://rockini-nienburg.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Rockini  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/headphones-simple-solid.svg"
+            alt="Rockini icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Rockini
+    </a>
+
+    <a
+        class="button button-rock"
+        href="http://burnoutfestival.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Burnout Festival  ⚠️ External Link ⛔ No SSL"
+    >
+        <img
+            class="icon"
+            src="images/icons/hand-back-fist-solid.svg"
+            alt="Burnout Festival icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Burnout Festival ⛔
+    </a>
+
+    <a
+        class="button button-weserbeatz"
+        href="https://weserbeatz.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Weserbeatz  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/weserbeatz.jpg"
+            alt="Weserbeatz icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Weserbeatz
+    </a>
+
+    <a
+        class="button button-freibad-am-dobben"
+        href="https://freibad-am-dobben.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Freibad am Dobben  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/freibad.png"
+            alt="Freibad am Dobben icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Freibad am Dobben
+    </a>
+
+    <a
+        class="button button-weserbeatz"
+        href="https://das-sprotte.de/ihre-spende-ist-bei-uns-in-guten-haenden/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Das Sprotte  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/sprotte.jpg"
+            alt="Das Sprotte icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Das Sprotte
+    </a>
+
+    <a
+        class="button button-weserbeatz"
+        href="https://www.socialcarcrew.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Social Car Crew  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/socialcarcrew.png"
+            alt="Social Car Crew icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Social Car Crew
+    </a>
+
+    <a
+        class="button button-weserbeatz"
+        href="https://www.instagram.com/bmw_crew_lk_nienburg/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit BMW Crew Nienburg  ⚠️ External Link 📊 Big Data"
+    >
+        <img
+            class="icon"
+            src="images/icons/bmw.png"
+            alt="BMW Crew Nienburg icon"
+            aria-hidden="true"
+            loading="lazy"
+        />BMW Crew Nienburg ⚠️
+    </a>
+
+    <a
+        class="button button-rally-sulingen"
+        href="https://www.rallye-sulingen.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Rally Sulingen  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/rallysulingen.png"
+            alt="Rally Sulingen icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Rally Sulingen
+    </a>
+
+    <a
+        class="button button-weserbeatz"
+        href="https://www.dielinke-ni.de/start/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Visit Die Linke Nienburg  ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/dielinke.svg"
+            alt="Die Linke icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Die Linke
+    </a>
+</nav>
+
+<p>🤔 you got 🪙 to spare? Donate here</p>
+
+<nav class="button-stack" aria-label="Donate">
+    <a
+        class="button button-default"
+        href="https://lnob.net/geforderte-projekte/sos-balkanroute/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="SOS Balkanroute ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />SOS Balkanroute
+    </a>
+    <a
+        class="button button-default"
+        href="https://spenden.dlrg.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="DLRG ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />DLRG
+    </a>
+    <a
+        class="button button-default"
+        href="https://www.uno-fluechtlingshilfe.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="UNO Flüchtlingshilfe ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />UNO Flüchtlingshilfe
+    </a>
+    <a
+        class="button button-default"
+        href="https://www.johanniter.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Johanniter ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Johanniter
+    </a>
+    <a
+        class="button button-default"
+        href="https://www.seenotretter.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Seenotretter ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />Seenotretter
+    </a>
+    <a
+        class="button button-default"
+        href="https://www.drk.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="DRK ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+            loading="lazy"
+        />DRK
+    </a>
+    <a
+        class="button button-default"
+        href="https://hanseatic-help.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button"
+        title="Hanseatic ⚠️ External Link"
+    >
+        <img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt="Website Icon"
+            aria-hidden="true"
+        />Hanseatic</a>
+        </nav>
+        <footer>
+          <p>Legal Links</p>
+          <a href="https://www.failxontour.de/privacy">Privacy Policy</a> |
+          <a href="https://felix.bauerschaefer.com/datenschutz"
+            >Datenschutzerklärung (German)</a
+          >|
+          <a href="https://felix.bauerschaefer.com/impressum"
+            >Impressum (German)</a
+          ><br />
+          ✔ No frameworks, no tracking, no bullshit.<br />Build your own by
+          forking
+          <a href="https://littlelink.io" rel="noopener noreferrer" target="_blank" title="This is the link aggregator this website is built with gr8 stuff!"
+            >LittleLink</a
+          >
+          always KISS
+          <div class="column">
+            <a
+              href="https://yesterweb.org/no-to-web3/" rel="noopener noreferrer" target="_blank"
+            >
+              <img
+                class="gif"
+                height="31"
+                src="images/noweb32.gif"
+                alt="Say no to web3"
+                width="88"
+                loading="lazy"
+                title="Say no to web3  ⚠️ External Link"
+              />
+              <img
+                class="gif"
+                height="31"
+                src="images/roly-saynotoweb3.gif"
+                alt="Say no to web3"
+                width="88"
+                loading="lazy"
+                title="Say no to web3 ⚠️ External Link"
+              />
+            </a>
+            <a href="https://lu.tiny-universes.net/index2.html" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/b-parentaladvisory5.png"
+                alt="Parental Advisory - The internet is a shitty babysiter"
+                width="88"
+                loading="lazy"
+                title="Parental Advisory - Age Rating ⚠️ External Link"
+              />
+            </a>
+            <a href="https://hamptonroadspride.org/flags" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/lgbtqia+support.gif"
+                alt="LGBTQIA+ Support or die, we got progress to do!"
+                width="88"
+                loading="lazy"
+                title="Support LGBTQIA+ or NaN ⚠️ External Link"
+              />
+            </a>
+            <a href="https://blagi.neocities.org/" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/bestviewed.gif"
+                alt="Best viewed with a computer"
+                width="88"
+                loading="lazy"
+                title="Beep Boop ⚠️ External Link"
+              />
+            </a>
+            <br />
+            <iframe
+              height="31"
+              src="//incr.easrng.net/badge?key=changeme"
+              style="background: url(images/bg.gif)"
+              title="increment badge"
+              width="88"></iframe>
+            <a href="https://www.linuxmint.com/" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/gnu-linux.gif"
+                alt="This website was made with GNU/Linux"
+                width="88"
+                loading="lazy"
+                title="Linux Mint ⚠️ External Link"
+              />
+            </a>
+            <a
+              href="https://discuss.techlore.tech/t/discord-is-a-privacy-nightmare/7007" rel="noopener noreferrer" target="_blank"
+            >
+              <img
+                class="gif"
+                height="31"
+                src="images/discord-no-way.gif"
+                alt="F#+? off Discord"
+                width="88"
+                loading="lazy"
+                title="Discord sucks here's why ⚠️ External Link"
+              />
+            </a>
+            <a
+              href="https://wikiless.tiekoetter.com/wiki/Criticism_of_Facebook?lang=en" rel="noopener noreferrer" target="_blank"
+            >
+              <img
+                class="gif"
+                height="31"
+                src="images/fckfb.gif"
+                alt="F#+? off Facebook"
+                width="88"
+                loading="lazy"
+                title="Fuck Facebook, Meta fuck Zuckerberg ⚠️ External Link"
+              />
+            </a>
+            <a href="https://fuckoffgoogle.de/" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/google_stand.gif"
+                alt="F#+? off Google"
+                width="88"
+                loading="lazy"
+                title="Fight for Privacy, Standards against Monopolistic Practices. Stand up to Google ⚠️ External Link"
+              />
+            </a>
+            <a href="https://www.ethicalconsumer.org/retailers/ten-reasons-avoid-amazon" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/sucks.gif"
+                alt="Amazon sucks"
+                width="88"
+                loading="lazy"
+                title="Yeah my website sucks, but the one in this article too ⚠️ External Link"
+              />
+            </a>
+            <a href="https://jointhefediverse.net/learn/?lang=en-us" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/neo-fedi.gif"
+                alt="Join the fediverse now"
+                width="88"
+                loading="lazy"
+                title="Join the fediverse now ⚠️ External Link"
+              />
+            </a>
+            <a
+              href="https://variety.com/2025/digital/news/deerhoof-remove-catalog-from-spotify-daniel-ek-ai-investment-1236443990/" rel="noopener noreferrer" target="_blank"
+            >
+              <img
+                class="gif"
+                height="31"
+                src="images/shitify.gif"
+                alt="when you love music but hate artists Spotify"
+                width="88"
+                loading="lazy"
+                title="when you love music but hate artists Spotify ⚠️ External Link"
+              />
+            </a>
+            <a href="https://afd-verbot.jetzt/en" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/antinazi.gif"
+                alt="No Nazi, No Racism, No Facism"
+                width="88"
+                loading="lazy"
+                title="No Nazi, No Racism, No Facism you wanna hear a joke how many nazis do you need to turn in a light bulb, nein ⚠️ External Link"
+              />
+            </a>
+            <br />
+            <a href="https://wiki.selfhtml.org/" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/got_html.gif"
+                alt="got html?"
+                width="88"
+                loading="lazy"
+                title="wiki.selfhtml.org ⚠️ External Link"
+              />
+            </a>
+            <a href="https://www.w3.org/developers/tools/" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                src="images/I_heart_validator_lg.png"
+                alt="I heart validator"
+                width="88"
+                loading="lazy"
+                title="I heart validator W3 site ⚠️ External Link"
+              />
+            </a>
+            <a href="http://validator.w3.org/" rel="noopener noreferrer" target="_blank">
+              <img
+                class="gif"
+                height="31"
+                style="border: 0"
+                src="images/valid-html5.gif"
+                alt="[Valid HTML]"
+                title="Validate my HTML ⚠️ External Link"
+                width="88"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener noreferrer">
+              <img
+                class="gif"
+                style="border: 0; width: 88px; height: 31px"
+                src="images/vcss-blue.png"
+                alt="[Valid CSS!]"
+                title="Validate my CSS ⚠️ External Link"
+                loading="lazy"
+              />
+            </a>
+            <a
+              href="http://validator.w3.org/feed/check.cgi?url=https%3A//www.failxontour.de/rss" target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                class="gif"
+                height="31"
+                style="border: 0"
+                src="images/valid-rss-rogers.png"
+                alt="[Valid RSS]"
+                title="Validate my RSS feed  ⚠️ External Link"
+                width="88"
+                loading="lazy"
+              />
+            </a>
+            <br/>
+            <a
+              href="https://cadence.moe/blog/2024-10-05-created-by-a-human-badges" target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                class="gif"
+                height="61"
+                src="images/created-by-a-human-with-a-heart-3x.png"
+                alt="This site was made by a human and this is the badge to show it"
+                width="167"
+                loading="lazy"
+                title="created by a human with a heart ⚠️ External Link"
+              />
+            </a>
+            <a href="https://www.htmlhobbyist.com/?webring=htmlhobbyist" target="_blank" rel="noopener noreferrer">
+              <img
+                class="gif"
+                height="59"
+                src="images/stamp-yrownwebsite.png"
+                alt="Maybe you should make a website?"
+                width="103"
+                loading="lazy"
+                title="Maybe you should make your own website - cool ⚠️ External Link"
+              />
+            </a>
+            <a href="https://www.htmlhobbyist.com/" target="_blank" rel="noopener noreferrer">
+              <img
+                class="gif"
+                height="61"
+                src="images/html-hobbyist-badge.svg"
+                alt="I am an HTML Hobbyist"
+                style="border: none"
+                width="68"
+                loading="lazy"
+                title="HTML Hobbyist ⚠️ External Link"
+              />
+            </a>
+          </div>
+          Source Code:&nbsp;
+          <a href="https://github.com/failxontour/failxontour.de" rel="noopener noreferrer" target="_blank" title="Github Repo ⚠️ External Link"
+            >Github</a
+          >
+          |
+          <a href="https://codeberg.org/failxontour/failxontour.de" rel="noopener noreferrer" target="_blank" title="Codeberg Repo ⚠️ External Link">Codeberg</a><br>
+          © 2025 by <a href="https://failxontour.de">failxontour</a> is
+          licensed under<br><a rel="license" href="/cc-by-nc-sa-4.0.LICENSE">CC BY-NC-SA 4.0</a
+          ><br>
+          <img
+            height="16"
+            src="svgs/cc/cc.svg"
+            alt="cc"
+            style="
+              max-width: 1em;
+              max-height: 1em;
+              margin-left: 0.2em;
+              display: inline-block;
+            "
+            width="16"
+            loading="lazy"
+            rel="license"
+          /><img
+            height="16"
+            src="svgs/cc/by.svg"
+            alt="by"
+            style="
+              max-width: 1em;
+              max-height: 1em;
+              margin-left: 0.2em;
+              display: inline-block;
+            "
+            width="16"
+            loading="lazy"
+            rel="license"
+          /><img
+            height="16"
+            src="svgs/cc/nc.svg"
+            alt="nc"
+            style="
+              max-width: 1em;
+              max-height: 1em;
+              margin-left: 0.2em;
+              display: inline-block;
+            "
+            width="16"
+            loading="lazy"
+            rel="license"
+          /><img
+            height="16"
+            src="svgs/cc/sa.svg"
+            alt="sa"
+            style="
+              max-width: 1em;
+              max-height: 1em;
+              margin-left: 0.2em;
+              display: inline-block;
+            "
+            width="16"
+            loading="lazy"
+            rel="license"
+          />
+          <p>last time updated</p>
+          <p id="lastupdated"></p>
+          <p id="cookies"></p>
+          <span>🍽️ now serving</span>
+          <a href="https://www.digits.net" target="_blank" rel="noopener noreferrer"
+            ><img
+              height="20"
+              style="margin: auto"
+              src="https://counter.digits.net/?counter={bc0f90d3-04a4-0eb4-8130-f967bf5c9194}&template=simple&digits=10&rightface&zerofill&charset=9"
+              alt="Hit Counter by Digits"
+              width="150"
+              loading="lazy"
+              title="⚠️ External Link"
+          /></a>
+        </footer>
+      </div>
+    </div>
+    <a
+      href="https://www.deviantart.com/kidicarusloki/art/Shego-Flexing-1k-Special-952350503" target="_blank" rel="noopener noreferrer" title="Artist Page ⚠️ External Link"
+    >
+      <p>shego flexing gif by kidicarusloki</p>
+      <img
+        alt="Shego Flexing [1k Special]"
+        style="
+          text-align: right;
+          align-self: flex-end;
+          float: right;
+          position: absolute;
+          right: 0;
+          z-index: -1;
+          width: 35em;
+        "
+        src="/images/shego.gif"
+        title="mmh yes look my mooscles getting bigger (Vargskelethor Joel | Hard Time reference)  ⚠️ External Link"
+        loading="lazy"
+      />
+    </a>
+    <script>
+      'use strict';
+      const date = new Date(document.lastModified);
+      document.getElementById("lastupdated").innerHTML = date;
+      function getCookies() {
+        document.getElementById("cookies").innerHTML = document.cookie;
+      }
+    </script>
+    <script
+      src="js/databuddy.min.js"
+      data-client-id="fio8_6lbk64kTkpAlEIwk"
+      data-track-hash-changes="true"
+      data-track-attributes="true"
+      data-track-outgoing-links="true"
+      data-track-interactions="true"
+      data-track-engagement="true"
+      data-track-scroll-depth="true"
+      data-track-exit-intent="true"
+      data-track-bounce-rate="true"
+      data-track-web-vitals="true"
+      data-track-errors="true"
+      data-enable-batching="true"
+      crossorigin="anonymous"
+      async
+    ></script>
+  </body>
+</html>

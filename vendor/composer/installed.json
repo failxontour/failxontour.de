@@ -38,7 +38,9 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Matt Butcher",
@@ -100,14 +102,21 @@
         "masterminds/html5": "Alternative HTML parser for PHP, for better HTML5 support."
       },
       "time": "2022-02-10T01:05:27+00:00",
-      "bin": ["bin/fetch-mf2", "bin/parse-mf2"],
+      "bin": [
+        "bin/fetch-mf2",
+        "bin/parse-mf2"
+      ],
       "type": "library",
       "installation-source": "source",
       "autoload": {
-        "files": ["Mf2/Parser.php"]
+        "files": [
+          "Mf2/Parser.php"
+        ]
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["CC0-1.0"],
+      "license": [
+        "CC0-1.0"
+      ],
       "authors": [
         {
           "name": "Barnaby Walters",
@@ -130,17 +139,17 @@
     },
     {
       "name": "nikic/php-parser",
-      "version": "v5.6.1",
-      "version_normalized": "5.6.1.0",
+      "version": "v5.6.2",
+      "version_normalized": "5.6.2.0",
       "source": {
         "type": "git",
         "url": "https://github.com/nikic/PHP-Parser.git",
-        "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2"
+        "reference": "3a454ca033b9e06b63282ce19562e892747449bb"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
-        "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
+        "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/3a454ca033b9e06b63282ce19562e892747449bb",
+        "reference": "3a454ca033b9e06b63282ce19562e892747449bb",
         "shasum": ""
       },
       "require": {
@@ -153,8 +162,10 @@
         "ircmaxell/php-yacc": "^0.0.7",
         "phpunit/phpunit": "^9.0"
       },
-      "time": "2025-08-13T20:13:15+00:00",
-      "bin": ["bin/php-parse"],
+      "time": "2025-10-21T19:32:17+00:00",
+      "bin": [
+        "bin/php-parse"
+      ],
       "type": "library",
       "extra": {
         "branch-alias": {
@@ -168,17 +179,22 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["BSD-3-Clause"],
+      "license": [
+        "BSD-3-Clause"
+      ],
       "authors": [
         {
           "name": "Nikita Popov"
         }
       ],
       "description": "A PHP parser written in PHP",
-      "keywords": ["parser", "php"],
+      "keywords": [
+        "parser",
+        "php"
+      ],
       "support": {
         "issues": "https://github.com/nikic/PHP-Parser/issues",
-        "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.1"
+        "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.2"
       },
       "install-path": "../nikic/php-parser"
     },
@@ -204,10 +220,14 @@
       "type": "library",
       "installation-source": "dist",
       "autoload": {
-        "files": ["http.php"]
+        "files": [
+          "http.php"
+        ]
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Sandeep Shetty",
@@ -217,7 +237,11 @@
       ],
       "description": "Convenience wrapper around cURL",
       "homepage": "https://github.com/phpish/http",
-      "keywords": ["api", "curl", "http"],
+      "keywords": [
+        "api",
+        "curl",
+        "http"
+      ],
       "support": {
         "issues": "https://github.com/phpish/http/issues",
         "source": "https://github.com/phpish/http/tree/master"
@@ -246,10 +270,14 @@
       "type": "library",
       "installation-source": "dist",
       "autoload": {
-        "files": ["link_header.php"]
+        "files": [
+          "link_header.php"
+        ]
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Sandeep Shetty",
@@ -259,7 +287,9 @@
       ],
       "description": "Link header (RFC 5988) parser",
       "homepage": "https://github.com/phpish/link_header",
-      "keywords": ["http"],
+      "keywords": [
+        "http"
+      ],
       "support": {
         "issues": "https://github.com/phpish/link_header/issues",
         "source": "https://github.com/phpish/link_header/tree/master"
@@ -290,10 +320,14 @@
       "type": "library",
       "installation-source": "dist",
       "autoload": {
-        "files": ["webmention.php"]
+        "files": [
+          "webmention.php"
+        ]
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": ["MIT"],
+      "license": [
+        "MIT"
+      ],
       "authors": [
         {
           "name": "Sandeep Shetty",
@@ -303,7 +337,10 @@
       ],
       "description": "Simple Webmention (http://webmention.org/) client in PHP",
       "homepage": "https://github.com/phpish/webmention",
-      "keywords": ["pingback", "webmention"],
+      "keywords": [
+        "pingback",
+        "webmention"
+      ],
       "support": {
         "issues": "https://github.com/phpish/webmention/issues",
         "source": "https://github.com/phpish/webmention/tree/v1.0.0"
