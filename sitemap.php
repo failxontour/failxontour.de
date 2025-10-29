@@ -109,6 +109,7 @@ echo '<ul>' . PHP_EOL;
 echo implode(PHP_EOL, $links);
 echo '</ul>' . PHP_EOL;
 echo '<ul>' . PHP_EOL;
+echo '<p>External Links</p>' . PHP_EOL;
 echo implode(PHP_EOL,$externalLinks);
 echo '</ul>' . PHP_EOL;
 ?>
