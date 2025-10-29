@@ -54,9 +54,32 @@ function recurse($dir, &$links) {
 
 // Array für externe Links
 $externalLinks = [
-  '<li><a rel="noopener noreferrer" href="https://mastodon.social/@failxontour">Mastodon ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="http://burnoutfestival.com/">Burnout Festival ⛔</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.instagram.com/bmw_crew_lk_nienburg/">BMW Crew Nienburg ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://codeberg.org/failxontour/failxontour.de">Codeberg ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://leitstelle511.net/">CCC | Leitstelle 511 ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://das-sprotte.de/ihre-spende-ist-bei-uns-in-guten-haenden/">Das Sprotte ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.drk.de/">DRK ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://freibad-am-dobben.de/">Freibad am Dobben ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://github.com/failxontour/failxontour.de">Github ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://hanseatic-help.org/">Hanseatic ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.johanniter.de/">Johanniter ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://littlelink.io/">LittleLink which is what my website is forked from ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://lnob.net/geforderte-projekte/sos-balkanroute/">SOS Balkanroute ⚠️</a></li>',
   '<li><a rel="noopener noreferrer" href="https://matrix.to/#/#nebulon:matrix.org">Matrix ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://steamcommunity.com/id/failxontour/">Steam ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://mastodon.social/@failxontour">Mastodon ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://rockini-nienburg.com/">Rockini ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.rallye-sulingen.de/">Rallye Sulingen ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.seenotretter.de/">Seenotretter ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://spenden.dlrg.de/">DLRG ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.socialcarcrew.de/">Social Car Crew ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://www.uno-fluechtlingshilfe.de/">UNO Flüchtlingshilfe ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://weserbeatz.de/">Weserbeatz ⚠️</a></li>',
+];
+
+$links = [
+  '<li><a href="/blog">Blog</a></li>',
+  '<li><a href="/videos">Videos</a></li>',
   '<li><a rel="noopener noreferrer" href="mailto:friends@failxontour.de">friends@failxontour.de 📧</a></li>',
   '<li><a rel="noopener noreferrer" href="https://keys.openpgp.org/search?q=friends@failxontour.de">PGP-Key ⚠️🔑📧</a></li>',
   '<li><a rel="noopener noreferrer" href="mailto:failx@tutanota.de">Tuta 📧</a></li>',
@@ -66,35 +89,9 @@ $externalLinks = [
   '<li><a rel="noopener noreferrer" href="https://thesa-fest.com/">JAUP</a></li>',
   '<li><a rel="noopener noreferrer" href="https://pronomen.net/@failxontour">Pronouns</a></li>',
   '<li><a rel="noopener noreferrer" href="https://guenther.bauerschaefer.com/">Dog</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://leitstelle511.net/">CCC | Leitstelle 511 ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://rockini-nienburg.com/">Rockini ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="http://burnoutfestival.com/">Burnout Festival ⛔</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://weserbeatz.de/">Weserbeatz ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://freibad-am-dobben.de/">Freibad am Dobben ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://das-sprotte.de/ihre-spende-ist-bei-uns-in-guten-haenden/">Das Sprotte ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.socialcarcrew.de/">Social Car Crew ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.instagram.com/bmw_crew_lk_nienburg/">BMW Crew Nienburg ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.rallye-sulingen.de/">Rallye Sulingen ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.dielinke-ni.de/start/">Die Linke ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://lnob.net/geforderte-projekte/sos-balkanroute/">SOS Balkanroute ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://spenden.dlrg.de/">DLRG ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.uno-fluechtlingshilfe.de/">UNO Flüchtlingshilfe ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.johanniter.de/">Johanniter ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.seenotretter.de/">Seenotretter ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://www.drk.de/">DRK ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://hanseatic-help.org/">Hanseatic ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://felix.bauerschaefer.com/datenschutz">Datenschutzerklärung (German)</a></li>',
   '<li><a rel="noopener noreferrer" href="https://felix.bauerschaefer.com/impressum">Impressum (German)</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://github.com/failxontour/failxontour.de">Github ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://codeberg.org/failxontour/failxontour.de">Codeberg ⚠️</a></li>',
-  '<li><a rel="noopener noreferrer" href="https://littlelink.io/">LittleLink which is what my website is forked from ⚠️</a></li>',
+  '<li><a rel="noopener noreferrer" href="https://felix.bauerschaefer.com/datenschutz">Datenschutzerklärung (German)</a></li>',
   '<li><a rel="license" href="/cc-by-nc-sa-4.0.LICENSE">License for my content | CC-BY-NC-SA 4.0</a></li>'
-
-];
-
-$links = [
-      '<li><a href="/videos">Videos</a></li>',
-      '<li><a href="/blog">Blog</a></li>'
 ]; // Array für interne Links
 
 // Aufrufen mit dem aktuellen Verzeichnis ('.'),
