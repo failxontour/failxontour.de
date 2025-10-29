@@ -26,9 +26,6 @@
     <meta name="keywords" content="failxontour, failx, sitemap" />
     <link rel="canonical" href="https://failxontour.de/sitemap" />
     <meta name="author" content="failxontour" />
-    <link rel="stylesheet" href="../../../css/reset.css" />
-    <link rel="stylesheet" href="../../../css/style.css" />
-    <link rel="stylesheet" href="../../../css/brands.css" />
 </head>
 <body>
 <?php
@@ -90,6 +87,8 @@ $externalLinks = [
   '<li><a rel="noopener noreferrer" href="https://felix.bauerschaefer.com/impressum">Impressum (German)</a></li>',
   '<li><a rel="noopener noreferrer" href="https://github.com/failxontour/failxontour.de">Github ⚠️</a></li>',
   '<li><a rel="noopener noreferrer" href="https://codeberg.org/failxontour/failxontour.de">Codeberg ⚠️</a></li>'
+  '<li><a rel="noopener noreferrer" href="https://littlelink.io/">LittleLink which is what my website is forked from ⚠️</a></li>',
+  '<li><a rel="license" href="/cc-by-nc-sa-4.0.LICENSE">License for my content | CC-BY-NC-SA 4.0</a></li>'
 
 ];
 
