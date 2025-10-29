@@ -92,7 +92,9 @@ $externalLinks = [
 
 ];
 
-$links = []; // Array für interne Links
+$links = [
+      '<li><a rel="license" href="/videos">Videos</a></li>'
+]; // Array für interne Links
 
 // Aufrufen mit dem aktuellen Verzeichnis ('.'),
 // ggf. anpassen, wenn sitemap.php nicht im Root-Verzeichnis der Website liegt
