@@ -99,7 +99,7 @@ $links = []; // Array für interne Links
 recurse('.', $links);
 
 // Füge die externen Links zum Haupt-Array hinzu
-$links = array_merge($links, $externalLinks);
+$links = array_merge($links);
 
 // Sortiere die Links alphabetisch
 sort($links);
@@ -107,6 +107,9 @@ sort($links);
 // HTML-Ausgabe
 echo '<ul>' . PHP_EOL;
 echo implode(PHP_EOL, $links);
+echo '</ul>' . PHP_EOL;
+echo '<ul>' . PHP_EOL;
+echo implode(PHP_EOL,$externalLinks);
 echo '</ul>' . PHP_EOL;
 ?>
 </body>
