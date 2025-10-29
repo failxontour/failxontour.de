@@ -22,7 +22,7 @@
     <link rel="alternate" type="application/atom+xml" title="FailXontour Atom Feed" href="atom.xml">
 </head>
 <body>
-  </article>
+<div class="container">
 <h1>welcome on my blog</h1>
 <h2><strong><a href="/blog/2025/08/not_dead_yet">latest article</a></strong></h2>
 <br>
@@ -35,7 +35,6 @@
         if (!file_exists($filePath)) {
             $filePath .= '.html'; // Füge die Erweiterung hinzu, wenn die Datei nicht gefunden wird
         }
-    
         $dom = new DOMDocument();
         @$dom->loadHTMLFile($filePath); // Das '@' unterdrückt Warnungen bei ungültigem HTML
         $h1 = $dom->getElementsByTagName("h1");
@@ -88,11 +87,10 @@ page size<br>
 $filename = "index.php";
 echo $filename . ": " . filesize($filename) . " bytes";
 ?>
-</div>
-    <script>    
-      const date = new Date(document.lastModified);
-      document.getElementById("lastupdated").innerHTML = date;        
-        </script>
+<script>    
+const date = new Date(document.lastModified);
+document.getElementById("lastupdated").innerHTML = date;        
+</script>
 </div>
 </body>
 </html>
