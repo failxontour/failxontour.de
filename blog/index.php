@@ -431,11 +431,12 @@
     <?php
     // Funktion zum Extrahieren des <h1>-Textes
     function extractH1Text($filename)
-    $filePath = $filename;
-    if (!file_exists($filePath)) {
-        $filePath .= '.html'; // Füge die Erweiterung hinzu, wenn die Datei nicht gefunden wird
-    }
     {
+        $filePath = $filename;
+        if (!file_exists($filePath)) {
+            $filePath .= '.html'; // Füge die Erweiterung hinzu, wenn die Datei nicht gefunden wird
+        }
+    
         $dom = new DOMDocument();
         @$dom->loadHTMLFile($filePath); // Das '@' unterdrückt Warnungen bei ungültigem HTML
         $h1 = $dom->getElementsByTagName("h1");
@@ -444,7 +445,7 @@
             : "Kein Titel gefunden";
     }
 
-    // Array mit Dateinamen
+    // Array mit Dateinamen ohne .html
     $files = [
         "2025/07/hey",
         "2025/07/mein-setup",
@@ -455,6 +456,8 @@
         "2025/07/no_headliner_today_nothing_new_in_the_west",
         "2025/08/not_dead_yet",
     ];
+
+    // Der Rest deines Skripts bleibt unverändert
 
     // Array zur Speicherung der Links
     $links = [];
