@@ -47,7 +47,7 @@ function recurse($dir, &$links) {
       $links[] = '</ul></li>';
     } elseif (pathinfo($dir.'/'.$file, PATHINFO_EXTENSION) == 'html') {
       preg_match("'<h1>(.*?)</h1>'si", file_get_contents($dir.'/'.$file), $heading);
-      $links[] = '<ul><a href="'.htmlspecialchars($dir.'/'.$file).'">'.strip_tags($heading[1]).'</a></ul>';
+      $links[] = '<li><a href="'.htmlspecialchars($dir.'/'.$file).'">'.strip_tags($heading[1]).'</a></li>';
     }
   }
 }
@@ -93,7 +93,8 @@ $externalLinks = [
 ];
 
 $links = [
-      '<li><a rel="license" href="/videos">Videos</a></li>'
+      '<li><a href="/videos">Videos</a></li>',
+      '<li><a href="/blog">Blog</a></li>'
 ]; // Array für interne Links
 
 // Aufrufen mit dem aktuellen Verzeichnis ('.'),
