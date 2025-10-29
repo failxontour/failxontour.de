@@ -2,13 +2,10 @@
   color: var(--button-text, #000);
   background-color: var(--button-background, transparent);
   border: var(--button-border, none);
-  transition:
-    filter 0.2s,
-    transform 0.2s;
+  transition: filter .2s, transform .2s;
 }
 
-.button:hover,
-button:hover {
+.button:hover, button:hover {
   filter: brightness(90%);
   transform: translateY(-1px);
 }
@@ -17,8 +14,12 @@ button:hover {
   filter: var(--icon-filter, none);
 }
 
+.icon-black {
+  filter: var(--icon-filter, brightness(0%));
+}
+
 .button.button-default {
-  --button-text: #fff;
+  --button-text: #000;
   --button-background: #2dbf0f;
   --button-border: 1px solid #fff;
 }
@@ -35,9 +36,9 @@ button:hover {
 }
 
 .button-matrix {
-  --button-text: #000;
-  --button-background: #fff;
-  --button-border: 1px solid #000;
+  --button-text: #fff;
+  --button-background: #2e3440;
+  --button-border: 1px solid #fff;
 }
 
 .button-steam-alt {
@@ -47,9 +48,9 @@ button:hover {
 }
 
 .button-weserbeatz {
-  --button-text: #000;
-  --button-background: #fff;
-  --button-border: 1px solid #000;
+  --button-text: #fff;
+  --button-background: #2e3440;
+  --button-border: 1px solid #fff;
 }
 
 .button-tierschutzverein {
@@ -58,21 +59,9 @@ button:hover {
   --button-border: 1px solid #fff;
 }
 
-.button-rock {
+.button-rock, .button-freibad-am-dobben, .button-rally-sulingen {
   --button-text: #fff;
-  --button-background: #000;
-  --button-border: 1px solid #fff;
-}
-
-.button-freibad-am-dobben {
-  --button-text: #fff;
-  --button-background: #1e59a6;
-  --button-border: 1px solid #fff;
-}
-
-.button-rally-sulingen {
-  --button-text: #fff;
-  --button-background: #430077;
+  --button-background: #2e3440;
   --button-border: 1px solid #fff;
 }
 /*# sourceMappingURL=failxontour.de.5c41e95d.css.map */
