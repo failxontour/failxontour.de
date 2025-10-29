@@ -33,7 +33,7 @@ function recurse($dir, &$links) {
   $files = array_diff(scandir($dir), ['.', '..']);
   
   // Verzeichnisse, die ausgeschlossen werden sollen
-  $excludedDirs = ['.vscode', '.github', '.git', 'js', 'css', 'downloads', 'images', 'hashover', 'svgs', 'audio', 'videos/lib'];
+  $excludedDirs = ['.vscode', '.github', '.git', 'js', 'css', 'downloads', 'images', 'hashover', 'svgs', 'audio', 'lib'];
 
   foreach ($files as $file) {
     // Überprüfen, ob das Verzeichnis ausgeschlossen werden soll
