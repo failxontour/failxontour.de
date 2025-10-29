@@ -2,8 +2,3 @@
 *.log
 videos/*.mkv
 videos/*.mp4
-.parcel-cache
-vendor/masterminds/html5
-dist/gangbeasts_bug.ccf4796d.mp4
-node_modules
-node_modules
