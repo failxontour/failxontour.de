@@ -431,9 +431,13 @@
     <?php
     // Funktion zum Extrahieren des <h1>-Textes
     function extractH1Text($filename)
+    $filePath = $filename;
+    if (!file_exists($filePath)) {
+        $filePath .= '.html'; // Füge die Erweiterung hinzu, wenn die Datei nicht gefunden wird
+    }
     {
         $dom = new DOMDocument();
-        @$dom->loadHTMLFile($filename); // Das '@' unterdrückt Warnungen bei ungültigem HTML
+        @$dom->loadHTMLFile($filepath); // Das '@' unterdrückt Warnungen bei ungültigem HTML
         $h1 = $dom->getElementsByTagName("h1");
         return $h1->length > 0
             ? $h1->item(0)->nodeValue
@@ -442,14 +446,14 @@
 
     // Array mit Dateinamen
     $files = [
-        "2025/07/hey.html",
-        "2025/07/mein-setup.html",
-        "2025/07/was-sind-cookies.html",
-        "2025/07/pressure-to-be-better.html",
-        "2025/07/the-pain-struggle-of-accessing-ilo4-linux.html",
-        "2025/07/data-recovery_emulators.html",
-        "2025/07/no_headliner_today_nothing_new_in_the_west.html",
-        "2025/08/not_dead_yet.html",
+        "2025/07/hey",
+        "2025/07/mein-setup",
+        "2025/07/was-sind-cookies",
+        "2025/07/pressure-to-be-better",
+        "2025/07/the-pain-struggle-of-accessing-ilo4-linux",
+        "2025/07/data-recovery_emulators",
+        "2025/07/no_headliner_today_nothing_new_in_the_west",
+        "2025/08/not_dead_yet",
     ];
 
     // Array zur Speicherung der Links
