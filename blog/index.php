@@ -392,75 +392,84 @@
 <div class="container-justify">
   <article class="gravatar-box">
   <div class="gravatar-hovercard">
-			<div class="gravatar-hovercard__inner">
-				<div class="gravatar-hovercard__header-image" style="background: url(&quot;https://0.gravatar.com/userimage/222401715/a8acdecfdcc16021cd3fc709c5d0cc4f?size=1024&quot;) 50% 50% / 100% no-repeat; width: 560px; left: 279px;"></div>
-				<div class="gravatar-hovercard__header">
-					<a class="gravatar-hovercard__avatar-link" href="https://gravatar.com/failxontour?utm_source=hovercard" target="_blank">
-						<img class="u-photo gravatar-hovercard__avatar" src="https://0.gravatar.com/avatar/a2dc60be9a7180a6813575ccb4acd671785a7de3aa064eaf8bb65d9a323b1959?s=256&amp;d=initials" width="104" height="104" alt="failxontour">
-					</a>
-					<a class="gravatar-hovercard__personal-info-link" href="https://gravatar.com/failxontour?utm_source=hovercard" target="_blank">
-						<a href="https://failxontour.de/blog" class="h-card" rel="me"><h4 class="gravatar-hovercard__name">failxontour</h4></a>
-						
-						<p class="gravatar-hovercard__location">Hannover</p>
-					</a>
-				</div>
-				<div class="gravatar-hovercard__body">
-								<p class="gravatar-hovercard__description"></p>
-							</div>
-				<div class="gravatar-hovercard__social-links">
-					<a class="gravatar-hovercard__social-link" href="https://gravatar.com/failxontour?utm_source=hovercard" target="_blank" data-service-name="gravatar">
-						<img class="gravatar-hovercard__social-icon" src="https://s.gravatar.com/icons/gravatar.svg" width="32" height="32" style="filter: invert(94%) sepia(0%) saturate(24%) hue-rotate(87deg) brightness(105%) contrast(108%);" alt="Gravatar">
-					</a>
-					
-				</div>
-				
-				<div class="gravatar-hovercard__footer">
-					<a class="gravatar-hovercard__profile-url" title="https://gravatar.com/failxontour" href="https://gravatar.com/failxontour?utm_source=profile-card" target="_blank">
-						gravatar.com/failxontour
-					</a>
-					<a class="gravatar-hovercard__profile-link" href="https://gravatar.com/failxontour?utm_source=profile-card" target="_blank">
-						View profile →
-					</a>
-				</div>				
-			</div>
+                        <div class="gravatar-hovercard__inner">
+                                <div class="gravatar-hovercard__header-image" style="background: url(&quot;https://0.gravatar.com/userimage/222401715/a8acdecfdcc16021cd3fc709c5d0cc4f?size=1024&quot;) 50% 50% / 100% no-repeat; width: 560px; left: 279px;"></div>
+                                <div class="gravatar-hovercard__header">
+                                        <a class="gravatar-hovercard__avatar-link" href="https://gravatar.com/failxontour?utm_source=hovercard" target="_blank">
+                                                <img class="u-photo gravatar-hovercard__avatar" src="https://0.gravatar.com/avatar/a2dc60be9a7180a6813575ccb4acd671785a7de3aa064eaf8bb65d9a323b1959?s=256&amp;d=initials" width="104" height="104" alt="failxontour">
+                                        </a>
+                                        <a class="gravatar-hovercard__personal-info-link" href="https://gravatar.com/failxontour?utm_source=hovercard" target="_blank">
+                                                <a href="https://failxontour.de/blog" class="h-card" rel="me"><h4 class="gravatar-hovercard__name">failxontour</h4></a>
+
+                                                <p class="gravatar-hovercard__location">Hannover</p>
+                                        </a>
+                                </div>
+                                <div class="gravatar-hovercard__body">
+                                                                <p class="gravatar-hovercard__description"></p>
+                                                        </div>
+                                <div class="gravatar-hovercard__social-links">
+                                        <a class="gravatar-hovercard__social-link" href="https://gravatar.com/failxontour?utm_source=hovercard" target="_blank" data-service-name="gravatar">
+                                                <img class="gravatar-hovercard__social-icon" src="https://s.gravatar.com/icons/gravatar.svg" width="32" height="32" style="filter: invert(94%) sepia(0%) saturate(24%) hue-rotate(87deg) brightness(105%) contrast(108%);" alt="Gravatar">
+                                        </a>
+
+                                </div>
+
+                                <div class="gravatar-hovercard__footer">
+                                        <a class="gravatar-hovercard__profile-url" title="https://gravatar.com/failxontour" href="https://gravatar.com/failxontour?utm_source=profile-card" target="_blank">
+                                                gravatar.com/failxontour
+                                        </a>
+                                        <a class="gravatar-hovercard__profile-link" href="https://gravatar.com/failxontour?utm_source=profile-card" target="_blank">
+                                                View profile →
+                                        </a>
+                                </div>
+                        </div>
   </article>
-	<h1>welcome on my blog</h1>
-    <h2><strong><a href="https://failxontour.de/blog/2025-08-27.html">latest article</a></strong></h2>
-    <br>
+<h1>welcome on my blog</h1>
+<h2><strong><a href="https://failxontour.de/blog/2025-08-27.html">latest article</a></strong></h2>
+<br>
+<!-- Vibe coded with duck.ai and GPT-4o mini -->
     <?php
-// Funktion zum Extrahieren des <h1>-Textes
-function extractH1Text($filename) {
-    $dom = new DOMDocument();
-    @$dom->loadHTMLFile($filename); // Das '@' unterdrückt Warnungen bei ungültigem HTML
-    $h1 = $dom->getElementsByTagName('h1');
-    return $h1->length > 0 ? $h1->item(0)->nodeValue : 'Kein Titel gefunden';
-}
+    // Funktion zum Extrahieren des <h1>-Textes
+    function extractH1Text($filename)
+    {
+        $dom = new DOMDocument();
+        @$dom->loadHTMLFile($filename); // Das '@' unterdrückt Warnungen bei ungültigem HTML
+        $h1 = $dom->getElementsByTagName("h1");
+        return $h1->length > 0
+            ? $h1->item(0)->nodeValue
+            : "Kein Titel gefunden";
+    }
 
-// Array mit Dateinamen
-$files = [
-    '2025-07-03-1227_hey.html',
-    '2025-07-04-1230_another_post.html'
-];
+    // Array mit Dateinamen
+    $files = [
+        "2025-07-03-1227_hey.html",
+        "2025-07-03-1229_mein-setup.html",
+        "2025-07-03-1327_was-sind-cookies.html",
+        "2025-07-04-1458_pressure-to-be-better.html",
+        "2025-07-05_1030_the-pain-struggle-of-accessing-ilo4-linux.html",
+        "2025-07-18_2343_data-recovery_emulators.html",
+        "2025-07-29_1935.html",
+        "2025-08-27.html",
+    ];
 
-// Array zur Speicherung der Links
-$links = [];
+    // Array zur Speicherung der Links
+    $links = [];
 
-// Durchlaufe die Dateien und erstelle Links
-foreach ($files as $file) {
-    $h1Text = extractH1Text($file);
-    $link = '<p><a href="' . $file . '">' . htmlspecialchars($h1Text) . '</a></p>';
-    $links[] = $link; // Füge den Link zum Array hinzu
-}
+    // Durchlaufe die Dateien und erstelle Links
+    foreach ($files as $file) {
+        $h1Text = extractH1Text($file);
+        $link =
+            '<p><a href="' .
+            $file .
+            '">' .
+            htmlspecialchars($h1Text) .
+            "</a></p>";
+        $links[] = $link; // Füge den Link zum Array hinzu
+    }
 
-// Ausgabe der Links
-echo "<div class='links-container'>" . implode("\n", $links) . "</div>";
-?>
-
-	<?php
-foreach (glob("*.{html}", \GLOB_BRACE) as $filename) {
-    echo "<a href=$filename\n>$filename\n</a><br>";
-}
-?>
+    // Ausgabe der Links
+    echo "<div class='links-container'>" . implode("\n", $links) . "</div>";
+    ?>
 <br>
 <div class="column">
   <strong><small>click for RSS/Atom feed</small></strong>
@@ -470,56 +479,56 @@ foreach (glob("*.{html}", \GLOB_BRACE) as $filename) {
 <a href="/">go back to link space</a><br><br>
 <div class="share-drawer__qr-code-wrapper" style="--x-rotation: 2.91095890410959deg; --y-rotation: 1.707317073170731deg;">
 <div class="share-drawer__qr-code-content">
-			<a class="share-drawer__qr-download-btn" href="https://gravatar.com/failxontour.qr?type=user&amp;version=3" download="failxontour.png" data-drawer-close="">
-				<img class="share-drawer__qr-code" src="https://gravatar.com/failxontour.qr?type=user&amp;version=3" width="200" height="200" alt="QR Code" data-qr-code-url="https://gravatar.com/failxontour.qr?type=user&amp;version=3">
-				<span class="share-drawer__download-label">
-					Download QR				</span>
-			</a>
-		</div>
+                        <a class="share-drawer__qr-download-btn" href="https://gravatar.com/failxontour.qr?type=user&amp;version=3" download="failxontour.png" data-drawer-close="">
+                                <img class="share-drawer__qr-code" src="https://gravatar.com/failxontour.qr?type=user&amp;version=3" width="200" height="200" alt="QR Code" data-qr-code-url="https://gravatar.com/failxontour.qr?type=user&amp;version=3">
+                                <span class="share-drawer__download-label">
+                                        Download QR                             </span>
+                        </a>
+                </div>
 </div>
-	<p>made with <a href="https://obsidian.md/">Obsidian</a> and the plugin Copy document as HTML from <a href="https://github.com/mvdkwast/obsidian-copy-as-html">mvdkwast</a></p><br>
+        <p>made with <a href="https://obsidian.md/">Obsidian</a> and the plugin Copy document as HTML from <a href="https://github.com/mvdkwast/obsidian-copy-as-html">mvdkwast</a></p><br>
 <p>© 2025 - FailXontour</p>
 <br>
 last time updated<p id="lastupdated"></p>
 page size<br>
 <?php
-$filename = 'index.php';
-echo $filename . ': ' . filesize($filename) . ' bytes';
+$filename = "index.php";
+echo $filename . ": " . filesize($filename) . " bytes";
 ?>
 </div>
     <script>    
       const date = new Date(document.lastModified);
       document.getElementById("lastupdated").innerHTML = date;        
-	</script>
+        </script>
   <script>
-		const hovercardInner = document.querySelector('.gravatar-hovercard__inner');
+                const hovercardInner = document.querySelector('.gravatar-hovercard__inner');
 
-		function openDrawer( target, container ) {
-			const selector = '.gravatar-hovercard__drawer[data-drawer-name="' + target.dataset.targetDrawer + '"]';
-			const drawer = container.querySelector( selector );
-			drawer?.classList.add( 'gravatar-hovercard__drawer--open' );
-		}
+                function openDrawer( target, container ) {
+                        const selector = '.gravatar-hovercard__drawer[data-drawer-name="' + target.dataset.targetDrawer + '"]';
+                        const drawer = container.querySelector( selector );
+                        drawer?.classList.add( 'gravatar-hovercard__drawer--open' );
+                }
 
-		function closeDrawer( target, container ) {
-			const selector = '.gravatar-hovercard__drawer[data-drawer-name="' + target.dataset.targetDrawer + '"]';
-			const drawer = container.querySelector( selector );
-			drawer?.classList.add( 'gravatar-hovercard__drawer--closing' );
-			drawer?.classList.remove( 'gravatar-hovercard__drawer--open' );
+                function closeDrawer( target, container ) {
+                        const selector = '.gravatar-hovercard__drawer[data-drawer-name="' + target.dataset.targetDrawer + '"]';
+                        const drawer = container.querySelector( selector );
+                        drawer?.classList.add( 'gravatar-hovercard__drawer--closing' );
+                        drawer?.classList.remove( 'gravatar-hovercard__drawer--open' );
 
-			setTimeout( () => {
-				drawer?.classList.remove( 'gravatar-hovercard__drawer--closing' );
-			}, 300 );
-		}
+                        setTimeout( () => {
+                                drawer?.classList.remove( 'gravatar-hovercard__drawer--closing' );
+                        }, 300 );
+                }
 
-		hovercardInner.querySelectorAll( '.gravatar-hovercard__button' ).forEach( ( el ) => {
-			el.addEventListener( 'click', () => openDrawer( el, hovercardInner ) );
-		} );
-		hovercardInner.querySelectorAll( '.gravatar-hovercard__drawer-close' ).forEach( ( el ) => {
-			el.addEventListener( 'click', () => closeDrawer( el, hovercardInner ) );
-		} );
-		hovercardInner.querySelectorAll( '.gravatar-hovercard__drawer-backdrop' ).forEach( ( el ) => {
-			el.addEventListener( 'click', () => closeDrawer( el, hovercardInner ) );
-		} );
-	</script></div>
+                hovercardInner.querySelectorAll( '.gravatar-hovercard__button' ).forEach( ( el ) => {
+                        el.addEventListener( 'click', () => openDrawer( el, hovercardInner ) );
+                } );
+                hovercardInner.querySelectorAll( '.gravatar-hovercard__drawer-close' ).forEach( ( el ) => {
+                        el.addEventListener( 'click', () => closeDrawer( el, hovercardInner ) );
+                } );
+                hovercardInner.querySelectorAll( '.gravatar-hovercard__drawer-backdrop' ).forEach( ( el ) => {
+                        el.addEventListener( 'click', () => closeDrawer( el, hovercardInner ) );
+                } );
+        </script></div>
 </body>
 </html>
