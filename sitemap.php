@@ -47,7 +47,7 @@ function recurse($dir, &$links) {
       $links[] = '</ul></li>';
     } elseif (pathinfo($dir.'/'.$file, PATHINFO_EXTENSION) == 'html') {
       preg_match("'<h1>(.*?)</h1>'si", file_get_contents($dir.'/'.$file), $heading);
-      $links[] = '<li><a href="'.htmlspecialchars($dir.'/'.$file).'">'.strip_tags($heading[1]).'</a></li>';
+      $links[] = '<ul><a href="'.htmlspecialchars($dir.'/'.$file).'">'.strip_tags($heading[1]).'</a></ul>';
     }
   }
 }
