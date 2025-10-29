@@ -442,14 +442,14 @@
 
     // Array mit Dateinamen
     $files = [
-        "2025-07-03-1227_hey.html",
-        "2025-07-03-1229_mein-setup.html",
-        "2025-07-03-1327_was-sind-cookies.html",
-        "2025-07-04-1458_pressure-to-be-better.html",
-        "2025-07-05_1030_the-pain-struggle-of-accessing-ilo4-linux.html",
-        "2025-07-18_2343_data-recovery_emulators.html",
-        "2025-07-29_1935.html",
-        "2025-08-27.html",
+        "2025/07/hey",
+        "2025/07/mein-setup",
+        "2025/07/was-sind-cookies",
+        "2025/07/pressure-to-be-better",
+        "2025/07/the-pain-struggle-of-accessing-ilo4-linux",
+        "2025/07/data-recovery_emulators",
+        "2025/07/no_headliner_today_nothing_new_in_the_west",
+        "2025/08/not_dead_yet",
     ];
 
     // Array zur Speicherung der Links
