@@ -437,7 +437,7 @@
     }
     {
         $dom = new DOMDocument();
-        @$dom->loadHTMLFile($filepath); // Das '@' unterdrückt Warnungen bei ungültigem HTML
+        @$dom->loadHTMLFile($filePath); // Das '@' unterdrückt Warnungen bei ungültigem HTML
         $h1 = $dom->getElementsByTagName("h1");
         return $h1->length > 0
             ? $h1->item(0)->nodeValue
