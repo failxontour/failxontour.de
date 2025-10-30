@@ -28,7 +28,7 @@
 <br>
 <!-- Vibe coded with duck.ai and GPT-4o mini -->
     <?php
-    // Funktion zum Extrahieren des <h1>-Textes
+    // Funktion zumExtrahieren des <h1>-Textes
     function extractH1Text($filename)
     {
         $filePath = $filename;
