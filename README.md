@@ -17,10 +17,6 @@ Forked from
 [LittleLink](https://github.com/sethcottle/littlelink)
 Originally using the MIT License
 
-Dependencies
-
-- [Modernizr](https://github.com/modernizr/modernizr)
-
 Blog
 
 - [Obsidian Copy as HTML Plugin](https://github.com/mvdkwast/obsidian-copy-as-html)
