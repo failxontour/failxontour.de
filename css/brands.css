@@ -22,7 +22,7 @@
 .button:hover,
 button:hover {
   filter: brightness(90%);
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */
 }
 
 /* Button Icons
